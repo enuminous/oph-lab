@@ -3,7 +3,9 @@ import {
     BLOG_URL,
     CHALLENGE_URL,
     CLAIM_TIER_LEGEND,
-    FLAGSHIP_PAPER_URL,
+    FLAGSHIP_PAPER_HTML_URL,
+    FLAGSHIP_PAPER_TITLE,
+    FLAGSHIP_PHILPAPERS_URL,
     LAB_REPO_URL,
     MINI_UNIVERSE_SIMULATION_URL,
     MATH_FOUNDATIONS_PAPER,
@@ -122,6 +124,11 @@ export function ResourcesPage() {
                             <a href={paper.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
                                 Open paper &rarr;
                             </a>
+                            {paper.htmlHref && (
+                                <a href={paper.htmlHref} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
+                                    HTML version &rarr;
+                                </a>
+                            )}
                             <a href={RESEARCH_PAPER_DIR_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
                                 Paper directory &rarr;
                             </a>
@@ -191,11 +198,17 @@ export function ResourcesPage() {
                         Technical paper
                     </h4>
                     <p style={{ margin: '0 0 8px 0', fontSize: '0.85em' }}>
-                        Primary technical account of the observer-first reconstruction and its stated boundaries.
+                        {FLAGSHIP_PAPER_TITLE}. Primary technical account of the observer-first reconstruction and its
+                        stated boundaries.
                     </p>
-                    <a href={FLAGSHIP_PAPER_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
-                        floatingpragma.io/oph/papers/ &rarr;
-                    </a>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                        <a href={FLAGSHIP_PHILPAPERS_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
+                            philpapers.org/rec/MUEFOC &rarr;
+                        </a>
+                        <a href={FLAGSHIP_PAPER_HTML_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85em' }}>
+                            HTML version &rarr;
+                        </a>
+                    </div>
                 </div>
 
                 <div className="card" style={{ borderLeft: '3px solid var(--accent-green)' }}>
@@ -303,6 +316,12 @@ export function ResourcesPage() {
                 <p>
                     Cite the specific paper that matches the claim you are discussing. The public OPH surface spans
                     the flagship synthesis, six focused papers, and maintained extra papers.
+                </p>
+                <p>
+                    For the flagship paper, cite its PhilPapers record:{' '}
+                    <a href={FLAGSHIP_PHILPAPERS_URL} target="_blank" rel="noopener noreferrer">
+                        {FLAGSHIP_PAPER_TITLE}
+                    </a>.
                 </p>
                 <p>
                     For technical statements, it is better to cite the exact paper and visible release line than to

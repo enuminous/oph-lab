@@ -1,3 +1,5 @@
+import { FLAGSHIP_PHILPAPERS_URL } from './paperSurface';
+
 export type GlossaryCategory =
     'foundation' |
     'axioms' |
@@ -339,7 +341,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
         usedIn: ['Axioms', 'Gauge Symmetry', 'Standard Model', 'QFT Boundary', 'Synthesis'],
         links: [
             { label: 'Gauge derivation walkthrough', url: '/standard-model' },
-            { label: 'Paper (Zenodo)', url: 'https://doi.org/10.5281/zenodo.18288114' },
+            { label: 'Paper (PhilPapers)', url: FLAGSHIP_PHILPAPERS_URL },
         ],
     },
     {

@@ -7,7 +7,7 @@ import { WalkthroughNav } from './WalkthroughNav';
 import { installLinkTracking, trackPageView } from '../lib/analytics';
 import { SeoManager } from './SeoManager';
 import { getSeoMeta } from '../seo';
-import { BLOG_URL, CHALLENGE_URL, MINI_UNIVERSE_SIMULATION_URL, OVERVIEW_URL, PHYSICS_UNIFICATION_URL, RESEARCH_LICENSE_URL, RESEARCH_PATENT_POLICY_URL, RESEARCH_RELEASE_DATE, RESEARCH_RELEASE_ID, RESEARCH_REPO_URL, SIMULATION_URL, TEXTBOOKS_URL, THEORY_URL } from '../content/paperSurface';
+import { BLOG_URL, CHALLENGE_URL, FLAGSHIP_PHILPAPERS_URL, MINI_UNIVERSE_SIMULATION_URL, OVERVIEW_URL, PHYSICS_UNIFICATION_URL, RESEARCH_LICENSE_URL, RESEARCH_PATENT_POLICY_URL, RESEARCH_RELEASE_DATE, RESEARCH_RELEASE_ID, RESEARCH_REPO_URL, SIMULATION_URL, TEXTBOOKS_URL, THEORY_URL } from '../content/paperSurface';
 
 export function Layout() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -137,7 +137,7 @@ export function Layout() {
                                 {' \u2022 '}
                                 <a href={RESEARCH_REPO_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Research Repo</a>
                                 {' \u2022 '}
-                                <a href="https://zenodo.org/records/18288114" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Paper (Zenodo)</a>
+                                <a href={FLAGSHIP_PHILPAPERS_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Paper (PhilPapers)</a>
                             </p>
                         </footer>
                     </div>

@@ -12,6 +12,7 @@ export type PaperSummary = {
     slug: string;
     title: string;
     href: string;
+    htmlHref?: string;
     surface: string;
     summary: string;
 };
@@ -44,13 +45,16 @@ export const RESEARCH_RELEASE_DATE = '10 September 2026';
 
 const GITHUB_PDF_BASE = `${RESEARCH_REPO_URL}/blob/main/paper`;
 const GITHUB_EXTRA_PDF_BASE = `${RESEARCH_REPO_URL}/blob/main/extra`;
-export const FLAGSHIP_PAPER_URL = 'https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/';
+export const FLAGSHIP_PAPER_TITLE = 'Finite Observer Consensus as a Reconstruction Principle';
+export const FLAGSHIP_PHILPAPERS_URL = 'https://philpapers.org/rec/MUEFOC';
+export const FLAGSHIP_PAPER_HTML_URL = 'https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/';
 
 export const OPH_PAPERS: PaperSummary[] = [
     {
         slug: 'flagship',
-        title: 'From Observer Consensus to Standard Physics',
-        href: FLAGSHIP_PAPER_URL,
+        title: FLAGSHIP_PAPER_TITLE,
+        href: FLAGSHIP_PHILPAPERS_URL,
+        htmlHref: FLAGSHIP_PAPER_HTML_URL,
         surface: 'Flagship synthesis',
         summary: 'The primary OPH paper: finite self-reading patches, public quantum records, Lorentz-frame algebra, and conditional geometry, Einstein, and Standard Model branches.',
     },
