@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
     CURRENT_RESEARCH_STATUS,
-    FLAGSHIP_PAPER_URL,
+    FLAGSHIP_PHILPAPERS_URL,
     MINI_UNIVERSE_SIMULATION_URL,
     OPH_PAPERS,
     RESEARCH_RELEASE_DATE,
@@ -293,7 +293,7 @@ export function Home() {
                 </p>
                 <div className="research-hero-actions">
                     <a className="btn btn-primary" href={TEXTBOOKS_URL}>Start with the textbooks</a>
-                    <a className="btn btn-ghost" href={FLAGSHIP_PAPER_URL}>Read the technical paper</a>
+                    <a className="btn btn-ghost" href={FLAGSHIP_PHILPAPERS_URL}>Read the technical paper</a>
                     <a className="btn btn-ghost" href={MINI_UNIVERSE_SIMULATION_URL}>Open the simulation</a>
                 </div>
             </section>
