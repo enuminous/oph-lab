@@ -25,9 +25,10 @@ export function SynthesisPage() {
                 Conservative records supply a continuous rank-three metric carrier. A declared population and local
                 reading law have a flat causal/count limit, with fixed interior interval counts recovering duration ratios.
                 On prepared addresses from that family, a specified free scalar action supports classical and quantum
-                detectors with certified continuum errors. A declared local Standard Model action has exact gauge
+                detectors with a controlled spatial/time limit. A separate 64-site field execution has an inferred
+                action clock and quantum comparisons over its time intervals. A declared local Standard Model action has exact gauge
                 identities, while Einstein reconstruction uses separate stress, entropy and curvature hypotheses.
-                Their common physical realization, and the field-to-recorded-clock connection, require additional arguments.
+                Physical preparation, calibrated clocks and common regional interpretation require additional arguments.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px', marginBottom: '16px' }}>
@@ -51,10 +52,12 @@ export function SynthesisPage() {
             </p>
                 <p style={{ margin: 0, fontSize: '0.82em', color: 'var(--text-secondary)' }}>
                 The <a href={`${RESEARCH_REPO_URL}/tree/main/code/causal_refinement`} target="_blank" rel="noreferrer">causal and clock receipts</a>
-                replay specified source histories. The <a href={`${RESEARCH_REPO_URL}/tree/main/code/source_scalar_packet`} target="_blank" rel="noreferrer">scalar certificate</a>
-                uses prepared addresses from the same family, but supplies its own action and model time. Shared
-                addresses do not establish a common field/event history. The physical population, signal, clock,
-                volume, stress and curvature identifications are explicit requirements.
+                replay specified source histories. The <a href={`${RESEARCH_REPO_URL}/tree/main/code/source_scalar_time_refinement`} target="_blank" rel="noreferrer">scalar refinement certificate</a>
+                uses prepared addresses from the same family and a supplied action. Its compact detector response
+                converges to the Dirichlet field, including vanishing response before continuum arrival. The
+                separate 64-site action clock uses whole configuration layers and a hidden stationary-history
+                hypothesis. Neither construction identifies field-read ancestry with the count law. Physical
+                population, signal, clock, volume, stress and curvature retain their explicit attachment requirements.
             </p>
             </div>
 

@@ -13,7 +13,7 @@ export function QftEmergesPage() {
             <p style={{ marginBottom: '16px' }}>
                 The finite quantum record algebra and conditional gauge classification supply distinct mathematical
                 ingredients. A specified free scalar action on prepared source addresses supports a common classical
-                and Fock-space detector comparison with controlled continuum errors. The full physical interacting
+                and Fock-space detector comparison with controlled spatial and temporal errors. The full physical interacting
                 Standard Model requires further source, locality, state and continuum identifications.
             </p>
 
@@ -90,7 +90,7 @@ export function QftEmergesPage() {
                     {
                         step: '8',
                         title: 'Quantum field theory as effective description',
-                        detail: 'A specified massive free scalar field in a Dirichlet cube has a controlled source-population approximation for classical and Fock detectors. A physical interacting relativistic field theory requires additional construction.',
+                        detail: 'A specified massive free scalar field in a Dirichlet cube has a joint spatial/time detector limit, including vanishing response before continuum arrival. Physical source selection and an interacting relativistic field theory require additional construction.',
                         color: 'var(--accent-green)',
                     },
                 ].map((item) => (
@@ -192,11 +192,22 @@ export function QftEmergesPage() {
                 finite mass weights; its model evolution and count clock are not identified by that fact.
             </p>
             <p style={{ marginBottom: '24px', fontSize: '0.84em', color: 'var(--text-secondary)' }}>
-                The <a href={`${RESEARCH_REPO_URL}/tree/main/code/source_scalar_packet`} target="_blank" rel="noreferrer">scalar packet</a>
+                The <a href={`${RESEARCH_REPO_URL}/tree/main/code/source_scalar_time_refinement`} target="_blank" rel="noreferrer">scalar refinement certificate</a>
                 compares a compact coherent preparation and separated compact detector with the massive Dirichlet
-                continuum field. At q=233, the total probability error is below 0.050055 while the induced signal is
-                above 0.137754 for every model time in [0.95,1]. The full operator residual includes leakage outside
-                the retained modes. Boundary, action, quantum convention and clock are declared.
+                continuum field. At q=233 and step 2<sup>&minus;17</sup>, selecting the nearest update inside
+                [0.95,1] gives probability error below 0.050078 and selected split response above 0.137746 at every
+                reference time in that window. The bound includes full operator leakage, localization tails,
+                time stepping and the original vacuum covariance change. The large tensor history is unexecuted;
+                boundary, action, quantum convention and refinement are declared.
+            </p>
+            <p style={{ marginBottom: '24px', fontSize: '0.84em', color: 'var(--text-secondary)' }}>
+                The separate <a href={`${RESEARCH_REPO_URL}/tree/main/code/source_scalar_clock_quantum`} target="_blank" rel="noreferrer">64-site clock comparison</a>
+                uses actual configuration records and a supplied stationary action, with one duration per whole layer.
+                Under its hidden-history and error-budget assumptions, 15 of 21 original-vacuum detector comparisons
+                resolve a signed response throughout the inferred time intervals. At update 16, error is at most
+                0.000811258283 and the continuous response is negative with magnitude at least 0.008694950984.
+                This preparation differs from q=233; neither spatial errors nor clock bounds transfer between them.
+                These are effect expectations, with physical calibration and outcome recording requiring separate inputs.
             </p>
 
             <h3 style={{ fontSize: '1em', marginTop: '32px' }}>Physical interacting continuum</h3>
