@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Layout } from './components/Layout';
 
 // Foundation
@@ -73,6 +73,13 @@ function App() {
           <Route path="synthesis" element={<SynthesisPage />} />
           <Route path="glossary" element={<GlossaryPage />} />
           <Route path="resources" element={<ResourcesPage />} />
+          <Route path="*" element={
+            <section aria-labelledby="not-found-title">
+              <h1 id="not-found-title">Page not found</h1>
+              <p>The requested lesson does not exist. Choose a lesson from the navigation or return to the overview.</p>
+              <Link to="/" className="btn btn-primary">Back to OPH Lab</Link>
+            </section>
+          } />
         </Route>
       </Routes>
     </BrowserRouter>

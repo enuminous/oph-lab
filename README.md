@@ -246,6 +246,18 @@ npm run deploy
 ```
 
 The app uses `gh-pages -d dist` for deployment.
+Build and check `dist` before deploying; `npm run deploy` publishes that
+directory and does not rebuild it. The repository remote is
+`https://github.com/muellerberndt/oph-lab` and the public domain is set by
+`public/CNAME`.
+
+Route titles and descriptions live in `src/seo-data.json`. The browser and
+postbuild use the same functions in `src/seo.ts`; `npm run check:seo` verifies
+all generated route metadata, canonical URLs, structured data and preview
+dimensions. The build generates `dist/sitemap.xml` from the route inventory.
+Optional `lastmod` dates are omitted because no verified per-page publication
+history is maintained; rebuilding an unchanged page does not imply a content
+update. The root metadata in `index.html` is checked against the same source.
 
 ## License And Patent Policy
 

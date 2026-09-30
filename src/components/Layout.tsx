@@ -102,7 +102,7 @@ export function Layout() {
                             fontSize: '0.85em'
                         }}>
                             <p>
-                                <a href="https://floatingpragma.io/" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Floating Pragma</a>
+                                <a href="https://floatingpragma.io/" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Pragma Research</a>
                                 {' \u2022 '}
                                 <a href={OVERVIEW_URL} style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>OPH Overview</a>
                                 {' \u2022 '}

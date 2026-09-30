@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/postbuild.mjs",
+    "build": "tsc -b && vite build && node scripts/postbuild.mjs && npm run check:seo",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "check:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.561.0",

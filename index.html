@@ -9,8 +9,8 @@
   <!-- Primary Meta Tags -->
   <title>OPH Lab | Research Status and Interactive Derivations</title>
   <meta name="title" content="OPH Lab | Research Status and Interactive Derivations" />
-  <meta name="description" content="Explore current OPH results with explicit status: exact finite theorems, conditional gravity and gauge branches, open physical bridges, and exploratory simulator receipts." />
-  <meta name="keywords" content="theory of everything, correct theory of everything, theory-of-everything, simulation theory, simulation theory implementation, physics unification, concrete theory of everything, theory of everything closure, quantum gravity, standard model unified with gravity, standard model and gravity unification, cosmological constant derivation, reality as simulation, grand unified theory, grand unification, holographic principle, holographic universe, emergent gravity, emergent spacetime, entropic gravity, observer patch holography, general relativity derivation, standard model derivation, cosmological constant problem, dark matter MOND, quantum error correction spacetime, gauge symmetry origin, Bernhard Mueller" />
+  <meta name="description" content="Interactive OPH lessons on self-reading observer patches, exact finite results, conditional gravity and gauge branches, and exploratory simulations." />
+  <meta name="keywords" content="Observer Patch Holography, self-reading patches, holography, quantum information, gravity, physics education, interactive simulations" />
   <meta name="author" content="Bernhard Mueller" />
   <link rel="canonical" href="https://oph-lab.floatingpragma.io/" />
 
@@ -18,8 +18,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://oph-lab.floatingpragma.io/" />
   <meta property="og:title" content="OPH Lab | Research Status and Interactive Derivations" />
-  <meta property="og:description" content="Explore current OPH results with explicit status: exact finite theorems, conditional gravity and gauge branches, open physical bridges, and exploratory simulator receipts." />
-  <meta property="og:site_name" content="Floating Pragma" />
+  <meta property="og:description" content="Interactive OPH lessons on self-reading observer patches, exact finite results, conditional gravity and gauge branches, and exploratory simulations." />
+  <meta property="og:site_name" content="Pragma Research" />
   <meta property="og:image" content="https://oph-lab.floatingpragma.io/oph-lab-social-card-v3.png" />
   <meta property="og:image:secure_url" content="https://oph-lab.floatingpragma.io/oph-lab-social-card-v3.png" />
   <meta property="og:image:type" content="image/png" />
@@ -31,31 +31,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://oph-lab.floatingpragma.io/" />
   <meta name="twitter:title" content="OPH Lab | Research Status and Interactive Derivations" />
-  <meta name="twitter:description" content="Explore current OPH results with explicit status: exact finite theorems, conditional gravity and gauge branches, open physical bridges, and exploratory simulator receipts." />
+  <meta name="twitter:description" content="Interactive OPH lessons on self-reading observer patches, exact finite results, conditional gravity and gauge branches, and exploratory simulations." />
   <meta name="twitter:image" content="https://oph-lab.floatingpragma.io/oph-lab-social-card-v3.png" />
   <meta name="twitter:image:src" content="https://oph-lab.floatingpragma.io/oph-lab-social-card-v3.png" />
   <meta name="twitter:image:alt" content="OPH Lab research-status card showing a network of bounded observer patches exchanging local records." />
 
   <!-- Additional SEO -->
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
-  <script>
-    (function () {
-      var path = window.location.pathname || '/';
-      if (path !== '/' && !path.endsWith('/')) {
-        path += '/';
-      }
-
-      var canonical = 'https://oph-lab.floatingpragma.io' + path;
-      var canonicalLink = document.querySelector('link[rel="canonical"]');
-      var ogUrl = document.querySelector('meta[property="og:url"]');
-      var twitterUrl = document.querySelector('meta[name="twitter:url"]');
-
-      if (canonicalLink) canonicalLink.setAttribute('href', canonical);
-      if (ogUrl) ogUrl.setAttribute('content', canonical);
-      if (twitterUrl) twitterUrl.setAttribute('content', canonical);
-    })();
-  </script>
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLGH209WMG"></script>
@@ -66,74 +49,22 @@
     gtag('config', 'G-HLGH209WMG', { cookie_domain: 'floatingpragma.io', send_page_view: false });
   </script>
 
-  <!-- Related Sites -->
-  <link rel="related" href="https://floatingpragma.io/" title="Floating Pragma" />
-  <link rel="related" href="https://floatingpragma.io/oph/" title="Observer Patch Holography" />
-  <link rel="related" href="https://floatingpragma.io/oph/papers/" title="OPH Paper Summaries" />
-  <link rel="related" href="https://floatingpragma.io/oph/physics-unification/" title="Observer Patch Holography and Physics Unification" />
-  <link rel="related" href="https://floatingpragma.io/oph/standard-model-gravity-unification/" title="Standard Model Unified with Gravity" />
-  <link rel="related" href="https://floatingpragma.io/oph/cosmological-constant-derivation/" title="Cosmological Constant Derivation" />
-  <link rel="related" href="https://blog.floatingpragma.io/" title="Floating Pragma Blog" />
+  <!-- Related research and company pages -->
+  <link rel="related" href="https://floatingpragma.io/" title="Pragma Research" />
+  <link rel="related" href="https://floatingpragma.io/physics/" title="Observer Patch Holography" />
+  <link rel="related" href="https://floatingpragma.io/research/#preprints" title="Main preprints" />
+  <link rel="related" href="https://philpapers.org/rec/MUEFOC" title="Physics preprint" />
+  <link rel="related" href="https://blog.floatingpragma.io/" title="Pragma Research Blog" />
   <link rel="related" href="https://learn.floatingpragma.io/" title="OPH Textbooks" />
   <link rel="related" href="https://simulation.floatingpragma.io/" title="OPH Mini-Universe Simulation" />
   <link rel="related" href="https://challenge.floatingpragma.io/" title="OPH Disproval Challenge" />
   <link rel="related" href="https://floatingpragma.io/starklab/" title="STARK Lab" />
-  <link rel="related" href="https://floatingpragma.io/selected-works/" title="Selected Works" />
-  <link rel="related" href="https://floatingpragma.io/awesome-zk-proofs/" title="Awesome ZK Proofs" />
-  <link rel="related" href="https://floatingpragma.io/awesome-ai-security/" title="Awesome AI Security" />
+  <link rel="related" href="https://floatingpragma.io/work/" title="Pragma Research Work" />
   <link rel="license" href="https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE" title="OPH License and Anti-Patent Covenant" />
   <link rel="related" href="https://github.com/FloatingPragma/observer-patch-holography/blob/main/PATENTS.md" title="OPH Open Use and Anti-Patent Covenant" />
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "OPH Lab | Research Status and Interactive Derivations",
-    "description": "Inspect the current OPH research surface: self-reading observer patches, exact finite results, branch-conditional gravity and gauge routes, open physical bridges, and exploratory simulator receipts.",
-    "url": "https://oph-lab.floatingpragma.io/",
-    "sameAs": [
-      "https://floatingpragma.io/oph/",
-      "https://floatingpragma.io/oph/papers/",
-      "https://floatingpragma.io/oph/physics-unification/",
-      "https://floatingpragma.io/oph/standard-model-gravity-unification/",
-      "https://floatingpragma.io/oph/cosmological-constant-derivation/",
-      "https://blog.floatingpragma.io/",
-      "https://learn.floatingpragma.io/",
-      "https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/",
-      "https://simulation.floatingpragma.io/",
-      "https://challenge.floatingpragma.io/"
-    ],
-    "applicationCategory": "EducationalApplication",
-    "keywords": ["observer patch holography", "physics unification", "quantum gravity", "standard model unified with gravity", "cosmological constant derivation", "holographic principle", "emergent spacetime", "standard model derivation", "consensus protocol", "screen microphysics", "observer synchronization", "OPH blog"],
-    "author": {
-      "@type": "Person",
-      "name": "Bernhard Mueller",
-      "url": "https://floatingpragma.io",
-      "sameAs": ["https://github.com/muellerberndt", "https://twitter.com/muellerberndt"]
-    },
-    "educationalLevel": "Advanced",
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Observer Patch Holography",
-        "description": "A framework that models reality as observer-based fixed-point consensus on a holographic screen, with separate surfaces for gravity, gauge structure, particles, records, and observer machinery."
-      },
-      {
-        "@type": "ScholarlyArticle",
-        "name": "Finite Observer Consensus as a Reconstruction Principle: Normal Forms, the Standard Model Lie Type, and a Route to the Einstein Field Equation",
-        "author": { "@type": "Person", "name": "Bernhard Mueller" },
-        "url": "https://philpapers.org/rec/MUEFOC",
-        "sameAs": "https://floatingpragma.io/oph/papers/from-observer-consensus-to-standard-physics/"
-      }
-    ],
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Floating Pragma",
-      "url": "https://floatingpragma.io"
-    }
-  }
-  </script>
+  <script type="application/ld+json" id="page-schema">{"@context":"https://schema.org","@type":"WebPage","@id":"https://oph-lab.floatingpragma.io/#webpage","url":"https://oph-lab.floatingpragma.io/","name":"OPH Lab | Research Status and Interactive Derivations","description":"Interactive OPH lessons on self-reading observer patches, exact finite results, conditional gravity and gauge branches, and exploratory simulations.","inLanguage":"en","image":"https://oph-lab.floatingpragma.io/oph-lab-social-card-v3.png","isPartOf":{"@type":"WebSite","@id":"https://oph-lab.floatingpragma.io/#website","name":"OPH Lab","url":"https://oph-lab.floatingpragma.io/","publisher":{"@type":"Organization","name":"Pragma Research","url":"https://floatingpragma.io/"}},"about":{"@type":"Thing","name":"Observer Patch Holography","url":"https://floatingpragma.io/physics/"},"citation":{"@type":"ScholarlyArticle","name":"Finite Observer Consensus as a Reconstruction Principle: Normal Forms, the Standard Model Lie Type, and a Route to the Einstein Field Equation","author":{"@type":"Person","name":"Bernhard Mueller"},"url":"https://philpapers.org/rec/MUEFOC"}}</script>
 </head>
 
 <body>
