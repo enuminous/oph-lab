@@ -14,6 +14,12 @@ comparative experiments. It is not endorsed by the OPH authors, is not a
 completed 46-animal execution or Lean proof audit, and does not establish
 physical validation or equivalence between OPH and EFMW.
 
+The related [conditional OPH-to-EFMW continuum-limit study](docs/OPH_EFMW_CONTINUUM_LIMIT.md)
+includes an explicitly augmented reversible patch-wave model, dimensional and
+boundary assumptions, a finite-horizon error bound, [reproducible numerical
+code](scripts/oph_efmw_continuum_demo.py), and [frozen test results](docs/data/oph_efmw_continuum_results.csv).
+It does **not** derive EFMW physics from canonical OPH accepted repairs.
+
 ## Source Of Truth
 
 Research status is controlled from the sibling `reverse-engineering-reality/` repo, especially:
