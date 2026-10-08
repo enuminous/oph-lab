@@ -20,6 +20,11 @@ boundary assumptions, a finite-horizon error bound, [reproducible numerical
 code](scripts/oph_efmw_continuum_demo.py), and [frozen test results](docs/data/oph_efmw_continuum_results.csv).
 It does **not** derive EFMW physics from canonical OPH accepted repairs.
 
+The [EFMW analysis of *Agreement and Surprise*](docs/AGREEMENT_AND_SURPRISE_EFMW_ANALYSIS.md)
+compares Mueller's local-repair thesis with recursive coherence, attractor dynamics
+and conditional gluing. It distinguishes agreement from stillness, shrinking
+updates from convergence, and structural correspondence from physical derivation.
+
 ## Source Of Truth
 
 Research status is controlled from the sibling `reverse-engineering-reality/` repo, especially:
