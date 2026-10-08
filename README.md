@@ -25,6 +25,12 @@ compares Mueller's local-repair thesis with recursive coherence, attractor dynam
 and conditional gluing. It distinguishes agreement from stillness, shrinking
 updates from convergence, and structural correspondence from physical derivation.
 
+The [Cadence–OPH–EFMW common-core proposal](docs/CADENCE_OPH_EFMW_COMMON_CORE_PROPOSAL.md)
+sets out a typed correspondence, a continuing-brain transfer experiment, and
+ablations to distinguish shared mechanisms from useful additions. Prepared for
+discussion with Bernhard Mueller, it is an independent research proposal; the
+hybrid and proposed experiments have not been implemented or executed.
+
 ## Source Of Truth
 
 Research status is controlled from the sibling `reverse-engineering-reality/` repo, especially:
