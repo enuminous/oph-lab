@@ -162,6 +162,18 @@ An actual correspondence would require explicit definitions of the state spaces 
 
 **Bottom line:** OPH demonstrates a research design attentive to exact hypotheses and failure boundaries. It is a useful candidate for a rigorous EFMW Zoo *comparison*. The appropriate next result is a controlled experiment or checked mapping—not a declaration of scientific equivalence.
 
+## Follow-up: a conditional wave-equation continuum limit
+
+A [separate constructive follow-up](OPH_EFMW_CONTINUUM_LIMIT.md) specifies a
+reversible, second-order **OPH-inspired** lattice update yielding an
+EFMW-form sourced scalar wave equation in a controlled continuum limit.
+It includes physical-unit conventions, periodic boundary conditions, a
+finite-horizon truncation-error bound and a [reproducible five-grid numerical
+test](../scripts/oph_efmw_continuum_demo.py). That demonstration applies to a
+**newly stipulated update**, not canonical OPH's monotone accepted-repair
+relation, and does not change this review's conclusion that actual
+OPH-to-EFMW derivability and physical validation remain unproved.
+
 ## Primary links
 
 - [Fork README](../README.md)
