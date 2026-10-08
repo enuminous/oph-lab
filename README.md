@@ -6,6 +6,14 @@ Production URL: `https://oph-lab.floatingpragma.io/`
 
 The lab is a reader-facing guide to the OPH paper stack. Its job is to explain the derivation routes, show where the recovered core stops, and keep public copy aligned with the paper surface. It is not a substitute for the papers, and it should not silently upgrade conditional or continuation results into unconditional theorem claims.
 
+## Independent EFMW Zoo review (fork only)
+
+This fork includes an [independent EFMW Zoo review of OPH Lab](docs/EFMW_ZOO_REVIEW.md),
+covering selected audit criteria, two illustrative counterexamples, and proposed
+comparative experiments. It is not endorsed by the OPH authors, is not a
+completed 46-animal execution or Lean proof audit, and does not establish
+physical validation or equivalence between OPH and EFMW.
+
 ## Source Of Truth
 
 Research status is controlled from the sibling `reverse-engineering-reality/` repo, especially:
