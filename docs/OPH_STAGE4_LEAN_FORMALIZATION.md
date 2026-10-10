@@ -49,6 +49,15 @@ identity and algebra. It assumes the transfer relation; it does not establish
 the Mehler kernel, completeness of the Hermite eigenbasis, or a physical-time
 interpretation.
 
+### Spatial lattice symbol
+
+The definition `latticeOmega` records the finite-dimensional symbol
+`κ + 4 Σᵢ Jᵢ sin²(θᵢ/2)`. Lean proves it is nonnegative when `κ` and each
+`Jᵢ` are nonnegative, is strictly positive when `κ > 0`, and equals `κ` at
+zero momentum. This closes the sign and zero-mode algebra for the declared
+symbol. It does not derive that symbol from the anchored Laplacian or prove
+Fourier diagonalization of the finite operator.
+
 ## CIRCUS provenance / dependency map
 
 | Claim | Formalized input | Dependency to break or still verify |
@@ -56,6 +65,7 @@ interpretation.
 | Nontrivial character has zero Haar average | Normalized left-invariant measure; group character; integrability | Instantiate the actual finite product `U(1)^E` and its product Haar measure |
 | Plaquette assignments survive iff link exponents cancel | Integer incidence matrix and exponent construction | Formalize `∂₂m`; do not strengthen `∂₂m=0` to `m=0` without a proven topological hypothesis |
 | Lattice transfer gap has massive-scalar dispersion | Mehler relation plus positive directional coupling | Independently prove the relation from the declared transfer kernel and establish the operator-spectrum theorem |
+| Spatial lattice symbol has a positive gap for positive `κ` | Finite sum `κ + 4 Σᵢ Jᵢ sin²(θᵢ/2)`; `κ > 0`; `Jᵢ ≥ 0` | The sign lemma is formalized; deriving this symbol from the operator remains open |
 | Transfer coordinate is physical time | No formal premise in this project | Requires an independent clock/causal identification; currently not established |
 
 No empirical labels, fitted scores, or target-selected examples enter these
@@ -65,7 +75,7 @@ exact upstream model and conventions are version-pinned.
 ## Validation and status
 
 The project is pinned and has a GitHub Actions build. A passing build checks
-only the two Lean declarations. It is not a full formalization of either
+only the selected Lean declarations. It is not a full formalization of either
 Stage 1 or Stage 2, does not prove a physical claim, and does not change the
 unresolved Stage 3 `N=2` result.
 
@@ -74,8 +84,3 @@ this project, or untrusted external theorem assumptions beyond Lean/Mathlib's
 kernel and the explicitly stated mathematical inputs. Failure criterion:
 any compilation error, hidden admission, or statement broader than the frozen
 targets above.
-
-
-### CI record
-
-The pinned `lake build OphStage4` passed on Lean `v4.35.0-rc4` at source commit `34b66c5a82a08c61b4b3a96be93d3d171c93249e`. The [GitHub Actions run](https://github.com/enuminous/oph-lab/actions/runs/38070053578) reports `Built OphStage4` and a successful 9,040-job Lake build. The compiler emitted one non-fatal unused-integrability-hypothesis warning; it did not affect the checked declarations.
