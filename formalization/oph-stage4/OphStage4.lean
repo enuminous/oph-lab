@@ -17,13 +17,14 @@ the transfer coordinate with physical time.
 -/
 
 theorem normalized_character_integral
-    {G : Type*} [Group G]
+    {G : Type*} [Group G] [MeasurableSpace G]
     (μ : Measure G) (χ : G →* ℂ)
     (hleft : ∀ (g : G) (f : G → ℂ),
       (∫ x, f (g * x) ∂μ) = ∫ x, f x ∂μ)
     (hμ : μ Set.univ = 1)
     (hχ : Integrable (fun x => χ x) μ) :
     (∫ x, χ x ∂μ) = if ∀ x, χ x = 1 then 1 else 0 := by
+  classical
   by_cases htriv : ∀ x, χ x = 1
   · have heq : (fun x => χ x) = fun _ => (1 : ℂ) := funext htriv
     rw [heq, if_pos htriv]
@@ -57,8 +58,8 @@ theorem dispersion_of_transfer_cosh
     (hE : Real.cosh E = 1 + omega / (2 * j)) :
     4 * j * (Real.sinh (E / 2)) ^ 2 = omega := by
   have hdouble : Real.cosh E = 1 + 2 * (Real.sinh (E / 2)) ^ 2 := by
-    rw [show E = 2 * (E / 2) by ring, Real.cosh_two_mul, Real.cosh_sq]
-    ring
+    rw [show E = 2 * (E / 2) by ring, Real.cosh_two_mul]
+    nlinarith [Real.cosh_sq_sub_sinh_sq (E / 2)]
   have hgap : 2 * j * (Real.cosh E - 1) = omega := by
     rw [hE]
     field_simp [hj]
