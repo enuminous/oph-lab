@@ -19,7 +19,7 @@ the transfer coordinate with physical time.
 theorem trivial_character_integral
     {G : Type*} [Monoid G] [MeasurableSpace G]
     (μ : Measure G) (χ : G →* ℂ)
-    (hμ : μ Set.univ = 1)
+    (hμ : μ.real Set.univ = 1)
     (htriv : ∀ x, χ x = 1) :
     (∫ x, χ x ∂μ) = 1 := by
   have heq : (fun x => χ x) = fun _ => (1 : ℂ) := funext htriv
@@ -51,7 +51,7 @@ theorem nontrivial_character_integral_zero
   have hz : (χ g - 1) * I = 0 := by
     calc
       (χ g - 1) * I = χ g * I - I := by ring
-      _ = I - I := by rw [hI]
+      _ = I - I := by rw [← hI]
       _ = 0 := sub_self I
   have hne : χ g - 1 ≠ 0 := sub_ne_zero.mpr hg
   rcases mul_eq_zero.mp hz with hzero | hzero
