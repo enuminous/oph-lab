@@ -16,49 +16,55 @@ dispersion formula; it does not prove the Mehler spectral theorem or identify
 the transfer coordinate with physical time.
 -/
 
-theorem normalized_character_integral
+theorem trivial_character_integral
+    {G : Type*} [MeasurableSpace G]
+    (μ : Measure G) (χ : G →* ℂ)
+    (hμ : μ Set.univ = 1)
+    (htriv : ∀ x, χ x = 1) :
+    (∫ x, χ x ∂μ) = 1 := by
+  have heq : (fun x => χ x) = fun _ => (1 : ℂ) := funext htriv
+  rw [heq]
+  simp [hμ]
+
+theorem nontrivial_character_integral_zero
     {G : Type*} [Group G] [MeasurableSpace G]
     (μ : Measure G) (χ : G →* ℂ)
     (hleft : ∀ (g : G) (f : G → ℂ),
       (∫ x, f (g * x) ∂μ) = ∫ x, f x ∂μ)
-    (hμ : μ Set.univ = 1)
-    (hχ : Integrable (fun x => χ x) μ) :
-    (∫ x, χ x ∂μ) = if ∀ x, χ x = 1 then 1 else 0 := by
-  classical
-  by_cases htriv : ∀ x, χ x = 1
-  · have heq : (fun x => χ x) = fun _ => (1 : ℂ) := funext htriv
-    rw [heq, if_pos htriv]
-    simp [hμ]
-  · rw [if_neg htriv]
-    obtain ⟨g, hg⟩ := not_forall.mp htriv
-    let I : ℂ := ∫ x, χ x ∂μ
-    have htranslate : (∫ x, χ (g * x) ∂μ) = ∫ x, χ x ∂μ :=
-      hleft g (fun x => χ x)
-    have hfactor : (∫ x, χ (g * x) ∂μ) = χ g * I := by
-      calc
-        (∫ x, χ (g * x) ∂μ) = ∫ x, χ g * χ x ∂μ := by
-          congr 1
-          funext x
-          exact map_mul χ g x
-        _ = χ g * I := by
-          rw [integral_const_mul]
-          rfl
-    have hI : I = χ g * I := by
-      simpa [I] using htranslate.symm.trans hfactor
-    have hz : (χ g - 1) * I = 0 := by
-      rw [mul_sub, one_mul, hI]
-      ring
-    have hne : χ g - 1 ≠ 0 := sub_ne_zero.mpr hg
-    rcases mul_eq_zero.mp hz with hzero | hzero
-    · exact (hne hzero).elim
-    · exact hzero
+    (hχ : Integrable (fun x => χ x) μ)
+    (hnontriv : ∃ g, χ g ≠ 1) :
+    (∫ x, χ x ∂μ) = 0 := by
+  obtain ⟨g, hg⟩ := hnontriv
+  let I : ℂ := ∫ x, χ x ∂μ
+  have htranslate : (∫ x, χ (g * x) ∂μ) = ∫ x, χ x ∂μ :=
+    hleft g (fun x => χ x)
+  have hfactor : (∫ x, χ (g * x) ∂μ) = χ g * I := by
+    calc
+      (∫ x, χ (g * x) ∂μ) = ∫ x, χ g * χ x ∂μ := by
+        congr 1
+        funext x
+        exact map_mul χ g x
+      _ = χ g * I := by
+        rw [integral_const_mul]
+        rfl
+  have hI : I = χ g * I := by
+    simpa [I] using htranslate.symm.trans hfactor
+  have hz : (χ g - 1) * I = 0 := by
+    rw [mul_sub, one_mul, hI]
+    ring
+  have hne : χ g - 1 ≠ 0 := sub_ne_zero.mpr hg
+  rcases mul_eq_zero.mp hz with hzero | hzero
+  · exact (hne hzero).elim
+  · exact hzero
 
 theorem dispersion_of_transfer_cosh
     {j omega E : ℝ} (hj : j ≠ 0)
     (hE : Real.cosh E = 1 + omega / (2 * j)) :
     4 * j * (Real.sinh (E / 2)) ^ 2 = omega := by
   have hdouble : Real.cosh E = 1 + 2 * (Real.sinh (E / 2)) ^ 2 := by
-    rw [show E = 2 * (E / 2) by ring, Real.cosh_two_mul]
+    have htwo := Real.cosh_two_mul (E / 2)
+    rw [show 2 * (E / 2) = E by ring] at htwo
+    rw [htwo]
     nlinarith [Real.cosh_sq_sub_sinh_sq (E / 2)]
   have hgap : 2 * j * (Real.cosh E - 1) = omega := by
     rw [hE]
