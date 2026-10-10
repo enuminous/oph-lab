@@ -1,0 +1,21 @@
+name: OPH Stage 4 Lean
+
+on:
+  push:
+    paths:
+      - 'formalization/oph-stage4/**'
+      - '.github/workflows/oph-stage4-lean.yml'
+  pull_request:
+    paths:
+      - 'formalization/oph-stage4/**'
+      - '.github/workflows/oph-stage4-lean.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formalization/oph-stage4
+          use-mathlib-cache: true
