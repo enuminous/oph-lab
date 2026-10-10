@@ -74,3 +74,8 @@ this project, or untrusted external theorem assumptions beyond Lean/Mathlib's
 kernel and the explicitly stated mathematical inputs. Failure criterion:
 any compilation error, hidden admission, or statement broader than the frozen
 targets above.
+
+
+### CI record
+
+The pinned `lake build OphStage4` passed on Lean `v4.35.0-rc4` at source commit `34b66c5a82a08c61b4b3a96be93d3d171c93249e`. The [GitHub Actions run](https://github.com/enuminous/oph-lab/actions/runs/38070053578) reports `Built OphStage4` and a successful 9,040-job Lake build. The compiler emitted one non-fatal unused-integrability-hypothesis warning; it did not affect the checked declarations.
