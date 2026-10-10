@@ -17,8 +17,10 @@ the transfer coordinate with physical time.
 -/
 
 theorem normalized_character_integral
-    {G : Type*} [Group G] [MeasurableSpace G] [MeasurableMul G]
-    (μ : Measure G) [IsMulLeftInvariant μ] (χ : G →* ℂ)
+    {G : Type*} [Group G]
+    (μ : Measure G) (χ : G →* ℂ)
+    (hleft : ∀ (g : G) (f : G → ℂ),
+      (∫ x, f (g * x) ∂μ) = ∫ x, f x ∂μ)
     (hμ : μ Set.univ = 1)
     (hχ : Integrable (fun x => χ x) μ) :
     (∫ x, χ x ∂μ) = if ∀ x, χ x = 1 then 1 else 0 := by
@@ -30,7 +32,7 @@ theorem normalized_character_integral
     obtain ⟨g, hg⟩ := not_forall.mp htriv
     let I : ℂ := ∫ x, χ x ∂μ
     have htranslate : (∫ x, χ (g * x) ∂μ) = ∫ x, χ x ∂μ :=
-      integral_mul_left_eq_self (fun x => χ x) g
+      hleft g (fun x => χ x)
     have hfactor : (∫ x, χ (g * x) ∂μ) = χ g * I := by
       calc
         (∫ x, χ (g * x) ∂μ) = ∫ x, χ g * χ x ∂μ := by
@@ -60,6 +62,7 @@ theorem dispersion_of_transfer_cosh
   have hgap : 2 * j * (Real.cosh E - 1) = omega := by
     rw [hE]
     field_simp [hj]
+    ring
   calc
     4 * j * (Real.sinh (E / 2)) ^ 2 =
         2 * j * (Real.cosh E - 1) := by rw [hdouble]; ring
