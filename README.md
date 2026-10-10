@@ -291,3 +291,7 @@ license and anti-patent covenant:
 
 - https://github.com/FloatingPragma/observer-patch-holography/blob/main/LICENSE
 - https://github.com/FloatingPragma/observer-patch-holography/blob/main/PATENTS.md
+
+## Stage 1: heat-bath transfer spectrum
+
+The [anchored-Laplacian heat-bath and transfer-spectrum analysis](docs/OPH_ANCHORED_LAPLACIAN_HEAT_BATH_TRANSFER.md) derives the massive free-scalar lattice transfer gap for a uniform periodic specialization, audits the gap from the general anchored-graph model, and records the Lean and Zoo proof boundaries. It is a conditional analytic result, not physical-time validation.
