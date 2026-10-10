@@ -75,4 +75,37 @@ theorem dispersion_of_transfer_cosh
         2 * j * (Real.cosh E - 1) := by rw [hdouble]; ring
     _ = omega := hgap
 
+/-! The spatial part of the anchored nearest-neighbor lattice operator is a
+finite sum of nonnegative mode contributions when its couplings are
+nonnegative. At zero momentum all of those contributions vanish, leaving the
+mass parameter `κ`. This is an algebraic statement about the declared lattice
+symbol; it does not prove that an operator has this symbol. -/
+
+def latticeOmega {d : ℕ} (κ : ℝ) (J θ : Fin d → ℝ) : ℝ :=
+  κ + 4 * ∑ i : Fin d, J i * (Real.sin (θ i / 2)) ^ 2
+
+theorem latticeOmega_nonneg {d : ℕ} {κ : ℝ} {J θ : Fin d → ℝ}
+    (hκ : 0 ≤ κ) (hJ : ∀ i, 0 ≤ J i) :
+    0 ≤ latticeOmega κ J θ := by
+  unfold latticeOmega
+  apply add_nonneg hκ
+  apply mul_nonneg (by norm_num)
+  apply Finset.sum_nonneg
+  intro i hi
+  exact mul_nonneg (hJ i) (sq_nonneg (Real.sin (θ i / 2)))
+
+theorem latticeOmega_zero_momentum {d : ℕ} (κ : ℝ) (J : Fin d → ℝ) :
+    latticeOmega κ J (fun _ => 0) = κ := by
+  simp [latticeOmega, Real.sin_zero]
+
+theorem latticeOmega_pos_of_positive_mass {d : ℕ} {κ : ℝ}
+    {J θ : Fin d → ℝ} (hκ : 0 < κ) (hJ : ∀ i, 0 ≤ J i) :
+    0 < latticeOmega κ J θ := by
+  unfold latticeOmega
+  apply add_pos_of_pos_of_nonneg hκ
+  apply mul_nonneg (by norm_num)
+  apply Finset.sum_nonneg
+  intro i hi
+  exact mul_nonneg (hJ i) (sq_nonneg (Real.sin (θ i / 2)))
+
 end OphLab.Stage4
