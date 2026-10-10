@@ -1,6 +1,6 @@
 # OPH Stage 4 Lean cores
 
-This Lake project contains two narrow proof targets extracted from the Stage 1
+This Lake project contains narrow proof targets extracted from the Stage 1
 and Stage 2 analyses.
 
 1. `normalized_character_integral` proves that a nontrivial integrable group
@@ -14,6 +14,11 @@ and Stage 2 analyses.
    `4*j*sinh(E/2)^2 = omega`. It does not prove that the transfer operator is a
    Mehler operator, that its Hermite eigenfunctions are complete, or that the
    transfer coordinate is physical time.
+3. `latticeOmega` defines the finite-dimensional spatial dispersion symbol
+   `κ + 4 Σᵢ Jᵢ sin²(θᵢ/2)`. The accompanying lemmas prove nonnegativity for
+   nonnegative `κ` and couplings, strict positivity when `κ > 0`, and the
+   exact zero-momentum value `κ`. They do not prove that the anchored
+   Laplacian or transfer operator is diagonalized by this symbol.
 
 ## Build
 
@@ -35,3 +40,7 @@ does not claim that the abstract character theorem proves Bernhard's intended
 zero-flux statement. Likewise, the dispersion lemma checks one algebraic step
 of the homogeneous periodic Gaussian calculation, not the full continuous
 transfer-spectrum proof. These boundaries are intentional.
+
+The spatial-symbol lemmas are finite algebraic checks. Their inputs are the
+declared symbol and coupling-sign conditions; derivation of the symbol from the
+operator remains a separate proof obligation.
