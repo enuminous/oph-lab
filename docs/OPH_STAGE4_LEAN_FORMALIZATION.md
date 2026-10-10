@@ -84,3 +84,6 @@ this project, or untrusted external theorem assumptions beyond Lean/Mathlib's
 kernel and the explicitly stated mathematical inputs. Failure criterion:
 any compilation error, hidden admission, or statement broader than the frozen
 targets above.
+
+
+The added spatial-symbol declarations passed the same pinned build on validation branch commit `fbdbfd9b93f8294a429783ff5185da1dfe38621d`. The [GitHub Actions run](https://github.com/enuminous/oph-lab/actions/runs/38088659108) completed successfully. That Lean file was then promoted to `main` in commit `d84587ee7896688aa9356254f306fed5b49940ea`.
