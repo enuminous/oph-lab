@@ -59,7 +59,7 @@ theorem dispersion_of_transfer_cosh
     ring
   have hgap : 2 * j * (Real.cosh E - 1) = omega := by
     rw [hE]
-    field_simp
+    field_simp [hj]
   calc
     4 * j * (Real.sinh (E / 2)) ^ 2 =
         2 * j * (Real.cosh E - 1) := by rw [hdouble]; ring
