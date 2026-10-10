@@ -299,3 +299,8 @@ The [anchored-Laplacian heat-bath and transfer-spectrum analysis](docs/OPH_ANCHO
 ## Stage 2: finite-lattice zero-flux check
 
 The [independent (N=1) zero-flux check](docs/OPH_N1_ZERO_FLUX_INDEPENDENT_CHECK.md) proves the finite (U(1)) Haar-character selection rule and separates it from the stronger, topology-dependent claim that every plaquette flux vanishes. The intended OPH statement remains unresolved until its source model and boundary conditions are identified.
+
+
+## Stage 3: independent N=2 flux-channel study
+
+The [four-dimensional N=2 flux-channel study](docs/OPH_N2_FLUX_STAGE3.md) adds an independent heat-bath implementation through L=8 and a Rao–Blackwell estimator for separated odd-flux correlations. It resolves neither a pole nor a clean no-pole result; the finite-volume run is exploratory and keeps the physical interpretation open.
