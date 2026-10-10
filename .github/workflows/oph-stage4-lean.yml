@@ -18,4 +18,6 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           lake-package-directory: formalization/oph-stage4
+          build: true
+          build-args: OphStage4
           use-mathlib-cache: true
