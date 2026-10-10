@@ -17,7 +17,7 @@ the transfer coordinate with physical time.
 -/
 
 theorem trivial_character_integral
-    {G : Type*} [MeasurableSpace G]
+    {G : Type*} [Monoid G] [MeasurableSpace G]
     (μ : Measure G) (χ : G →* ℂ)
     (hμ : μ Set.univ = 1)
     (htriv : ∀ x, χ x = 1) :
@@ -46,12 +46,13 @@ theorem nontrivial_character_integral_zero
         exact map_mul χ g x
       _ = χ g * I := by
         rw [integral_const_mul]
-        rfl
   have hI : I = χ g * I := by
     simpa [I] using htranslate.symm.trans hfactor
   have hz : (χ g - 1) * I = 0 := by
-    rw [mul_sub, one_mul, hI]
-    ring
+    calc
+      (χ g - 1) * I = χ g * I - I := by ring
+      _ = I - I := by rw [hI]
+      _ = 0 := sub_self I
   have hne : χ g - 1 ≠ 0 := sub_ne_zero.mpr hg
   rcases mul_eq_zero.mp hz with hzero | hzero
   · exact (hne hzero).elim
@@ -64,8 +65,7 @@ theorem dispersion_of_transfer_cosh
   have hdouble : Real.cosh E = 1 + 2 * (Real.sinh (E / 2)) ^ 2 := by
     have htwo := Real.cosh_two_mul (E / 2)
     rw [show 2 * (E / 2) = E by ring] at htwo
-    rw [htwo]
-    nlinarith [Real.cosh_sq_sub_sinh_sq (E / 2)]
+    nlinarith [htwo, Real.cosh_sq_sub_sinh_sq (E / 2)]
   have hgap : 2 * j * (Real.cosh E - 1) = omega := by
     rw [hE]
     field_simp [hj]
