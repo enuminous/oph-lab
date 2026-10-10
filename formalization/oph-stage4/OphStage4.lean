@@ -81,7 +81,7 @@ nonnegative. At zero momentum all of those contributions vanish, leaving the
 mass parameter `κ`. This is an algebraic statement about the declared lattice
 symbol; it does not prove that an operator has this symbol. -/
 
-def latticeOmega {d : ℕ} (κ : ℝ) (J θ : Fin d → ℝ) : ℝ :=
+noncomputable def latticeOmega {d : ℕ} (κ : ℝ) (J θ : Fin d → ℝ) : ℝ :=
   κ + 4 * ∑ i : Fin d, J i * (Real.sin (θ i / 2)) ^ 2
 
 theorem latticeOmega_nonneg {d : ℕ} {κ : ℝ} {J θ : Fin d → ℝ}
