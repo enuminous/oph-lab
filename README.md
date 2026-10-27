@@ -1,32 +1,41 @@
 # OPH Lab
 
-<!-- ENUMINOUS-NETWORK:START -->
-**eNuminous network:** [All repositories](https://enuminous.github.io/EFMW/repositories.html) · [EFMW](https://enuminous.github.io/EFMW/) · [102 equations](https://github.com/enuminous/Monolithic_102_EFMW) · [165 triplets](https://enuminous.github.io/FieldSpace/) · [Zoo](https://enuminous.github.io/Tortoise/) · [Lean](https://enuminous.github.io/Aristotle-102-Monolithic-Lean/) · [Engine](https://enuminous.github.io/Archimedes-Engine/) · [Papers](https://enuminous.github.io/medium/papers-essays-index.html) · [Audit](https://github.com/enuminous/EFMW_Post156_Zoo_Audit/blob/main/portfolio/INTERLOCK_AUDIT.md)
+<!-- ENUMINOUS-UNIFIED-NAV:START -->
+## Repository navigation
 
-[Repository](https://github.com/enuminous/oph-lab) · This repository is linked through its source; GitHub Pages is not enabled.
+**eNuminous network:** [All public repositories](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md) · [EFMW](https://github.com/enuminous/EFMW) · [102 equations](https://github.com/enuminous/Monolithic_102_EFMW) · [Frozen Lean](https://github.com/enuminous/Monolithic-102-Zoo-Lean4) · [Zoo](https://github.com/enuminous/Tortoise) · [Papers](https://github.com/enuminous/papers) · [Quantum geometry](https://github.com/enuminous/Base888-Quantum-Geometry)
 
-<details>
-<summary>Recent repositories (9)</summary>
+**This project:** [Repository home](https://github.com/enuminous/oph-lab) · [Subject index](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md#simulators-computation-and-experiments) · [Web application](index.html)
 
-- [Oroboros](https://github.com/enuminous/Oroboros) · [README](https://github.com/enuminous/Oroboros/blob/main/README.md) · [Page](https://enuminous.github.io/Oroboros/)
-- [P-NP](https://github.com/enuminous/P-NP) · [README](https://github.com/enuminous/P-NP/blob/main/README.md) · [Page](https://enuminous.github.io/P-NP/)
-- [Research-Program](https://github.com/enuminous/Research-Program) · [README](https://github.com/enuminous/Research-Program/blob/main/README.md) · [Page](https://enuminous.github.io/Research-Program/)
-- [I-Have-Guts](https://github.com/enuminous/I-Have-Guts) · [README](https://github.com/enuminous/I-Have-Guts/blob/main/README.md) · [Page](https://enuminous.github.io/I-Have-Guts/)
-- [Wrights-Law](https://github.com/enuminous/Wrights-Law) · [README](https://github.com/enuminous/Wrights-Law/blob/main/README.md) · [Page](https://enuminous.github.io/Wrights-Law/)
-- [Aristotle-eNuminous](https://github.com/enuminous/Aristotle-eNuminous) · [README](https://github.com/enuminous/Aristotle-eNuminous/blob/main/README.md) · [Page](https://enuminous.github.io/Aristotle-eNuminous/)
-- [Multiverse-Simulator](https://github.com/enuminous/Multiverse-Simulator) · [README](https://github.com/enuminous/Multiverse-Simulator/blob/main/README.md) · [Page](https://enuminous.github.io/Multiverse-Simulator/)
-- [accelerando-8192](https://github.com/enuminous/accelerando-8192) · [README](https://github.com/enuminous/accelerando-8192/blob/main/README.md) · [Page source](https://github.com/enuminous/accelerando-8192/blob/main/docs/index.html)
-- [Codex-888](https://github.com/enuminous/Codex-888) · [README](https://github.com/enuminous/Codex-888/blob/main/README.md) · [Page](https://enuminous.github.io/Codex-888/)
+<details open>
+<summary><strong>On this page</strong></summary>
+
+- [Independent EFMW Zoo review (fork only)](#independent-efmw-zoo-review-fork-only)
+- [Source Of Truth](#source-of-truth)
+- [Paper Surface Summary](#paper-surface-summary)
+  - [Fixed-point and scale surface](#fixed-point-and-scale-surface)
+  - [Source geometry and scalar fields](#source-geometry-and-scalar-fields)
+  - [Gravity / Lorentz branch](#gravity--lorentz-branch)
+  - [Gauge / Standard Model structural branch](#gauge--standard-model-structural-branch)
+  - [Particle branch](#particle-branch)
+  - [Consensus branch](#consensus-branch)
+  - [Screen microphysics branch](#screen-microphysics-branch)
+- [Lab Copy Rules](#lab-copy-rules)
+- [Development](#development)
+- [License And Patent Policy](#license-and-patent-policy)
+- [Stage 1: heat-bath transfer spectrum](#stage-1-heat-bath-transfer-spectrum)
+- [Stage 2: finite-lattice zero-flux check](#stage-2-finite-lattice-zero-flux-check)
+- [Stage 3: independent N=2 flux-channel study](#stage-3-independent-n2-flux-channel-study)
+- [Stage 4: Lean formalization cores](#stage-4-lean-formalization-cores)
+
 
 </details>
 
-<details>
-<summary>Repository indexes (1)</summary>
+**Related repositories:** [Devs2.0](https://github.com/enuminous/Devs2.0) · [OpenAI-math](https://github.com/enuminous/OpenAI-math) · [P-NP](https://github.com/enuminous/P-NP) · [Coherence-Prediction-Engine](https://github.com/enuminous/Coherence-Prediction-Engine) · [EFMW](https://github.com/enuminous/EFMW) · [papers](https://github.com/enuminous/papers)
 
-- [index.html](https://github.com/enuminous/oph-lab/blob/main/index.html)
+> **Evidence boundary:** A link between projects is navigation, not an assertion of proven equivalence, experimental validation, or shared authorship. See each repository’s own status and review notes.
+<!-- ENUMINOUS-UNIFIED-NAV:END -->
 
-</details>
-<!-- ENUMINOUS-NETWORK:END -->
 
 Interactive explainer app for Observer Patch Holography.
 
