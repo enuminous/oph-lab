@@ -12,5 +12,13 @@
     "docs/data/oph_flux_v2/L4_N2_seed20261105.json": "91ebbc95af74172b19fb2585de78659b5d70150ecf41a001bae4967f552a66fa",
     "docs/data/oph_flux_v2/L4_N2_seed20261106.json": "4ff3a7699780d8418b7ad340d864a47b105203e7610d1f3c16e68ccb973e4583"
   },
-  "scope": "Original historical, frozen classifier and corrected smoke records preserved byte for byte; source snapshot only, no re-execution or retroactive repair."
+  "scope": "Original historical, frozen classifier and corrected smoke records preserved byte for byte; source snapshot only, no re-execution or retroactive repair.",
+  "portable_replay_note": "The original exact-comparison analysis and its source are retained before the portable roundoff-only comparison correction; no sampling or classification thresholds changed.",
+  "portable_replay_archive": {
+    "preserved_from_commit": "6baa6f5dc0ae0e7d2b6dc90ab9ee0f645316dc89",
+    "files": {
+      "docs/data/oph_n2_pilot_v1/analysis_exact_v1.json": "b9ce1ff8caeac6e5f80a631dff63c6eb1244655cb2d15bb31c60d989c8e3cb9d",
+      "experiments/oph_n2/sources/analyze_oph_n2_pilot_exact_v1.py": "7f7ae1633ac9256c78a5477ff2e272943b7d11fc6b11bd350fcd9d3fc0174b8a"
+    }
+  }
 }

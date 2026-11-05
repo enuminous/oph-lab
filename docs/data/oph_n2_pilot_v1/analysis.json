@@ -1,5 +1,5 @@
 {
-  "analysis_sha256": "7f7ae1633ac9256c78a5477ff2e272943b7d11fc6b11bd350fcd9d3fc0174b8a",
+  "analysis_sha256": "6a6d1e24515b35e6d119dac6500bafc4088c86f7da446b06e59c0616a03cd291",
   "block_bootstrap": [
     {
       "block_length_measurements": 16,
@@ -9257,7 +9257,13 @@
     "multi-operator/threshold/dispersion evidence",
     "interacting continuum, calibrated physical clock and empirical identification"
   ],
-  "schema_version": "oph-n2-pilot-analysis-v1",
+  "replay_comparison": {
+    "float_absolute_tolerance": 1e-30,
+    "float_relative_tolerance": 1e-10,
+    "nonfloat_fields": "exact",
+    "scope": "platform_roundoff_only_not_statistical_tolerance"
+  },
+  "schema_version": "oph-n2-pilot-analysis-v2",
   "scope": "exploratory_sampling_and_shape_screen_not_spectral_or_physical_identification",
   "spectral_reconstruction": "unresolved",
   "stable_transfer_gap": "unresolved",

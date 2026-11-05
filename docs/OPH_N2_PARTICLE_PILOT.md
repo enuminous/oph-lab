@@ -184,6 +184,35 @@ of archived raw data**. It does not rerun the 6,144-sweep pilot or certify mixin
 The old smoke-only `summarize_oph_flux.py` remains available for historical
 reproduction; use the new analyzer for pilot diagnostics and the classifier bridge.
 
+### Portable replay correction
+
+The first published CI run passed all 88 implementation tests and source/data
+integrity checks, but failed the exact floating-point receipt comparison. A
+local replay with `NPY_DISABLE_CPU_FEATURES=AVX2,FMA3,AVX512F` and
+`OPENBLAS_CORETYPE=NEHALEM` reproduced 4,740 floating-only differences, with
+maximum relative difference 3.031e-13 and no categorical/structural changes.
+Bit-for-bit equality of derived FFT/BLAS statistics was an excessive portability
+requirement, even with the same raw data and pinned NumPy/SciPy versions.
+
+Analysis schema v2 uses relative tolerance **1e-10** and absolute tolerance
+**1e-30** for finite floating-point replay values only. The tiny absolute floor
+cannot hide the approximately 1e-11 RB signal or its uncertainty. Structure,
+hashes, policy names, integer counts and all categorical decisions must match
+exactly. These are computational replay tolerances; no sampler, shape-screen,
+diagnostic or statistical threshold changed. Two added tests reject material
+changes to tiny signals/covariances and any decision/provenance/structure change.
+The original [v1 receipt](data/oph_n2_pilot_v1/analysis_exact_v1.json) and
+[v1 analyzer source](../experiments/oph_n2/sources/analyze_oph_n2_pilot_exact_v1.py)
+remain hash-protected. On the recorded platform, v2 changes only the schema,
+analysis-source hash and explicit replay policy; every computed scientific
+value and classification is unchanged.
+
+```bash
+NPY_DISABLE_CPU_FEATURES=AVX2,FMA3,AVX512F OPENBLAS_CORETYPE=NEHALEM \
+  python scripts/analyze_oph_n2_pilot.py docs/data/oph_n2_pilot_v1 \
+  --check docs/data/oph_n2_pilot_v1/analysis.json
+```
+
 ## Evidence produced and measured costs
 
 See the [raw manifest](data/oph_n2_pilot_v1/manifest.json),
@@ -191,7 +220,7 @@ See the [raw manifest](data/oph_n2_pilot_v1/manifest.json),
 [timing probes](data/oph_n2_timing_v1.json). The outcome and timing table below
 are filled from the completed run, without changing the frozen policy.
 
-Validation includes ten new pilot tests (extent boundary, frozen-plan guards,
+Validation includes twelve new pilot tests (portable replay, extent boundary, frozen-plan guards,
 non-overwrite behavior, archived/current sampler equality, diagnostic replay,
 known IID/AR(1) autocorrelation, rank/folded R-hat alarms, connected-offset
 invariance, paired bootstrap and corrupted/incomplete evidence rejection).

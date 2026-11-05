@@ -12,7 +12,7 @@ from scripts.oph_particle_readouts import periodic_cosh_values, screen_channel
 from scripts.run_oph_n2_pilot import DEFAULT_CONFIG, ROOT, execute, sha, validate_config, write_json
 from scripts.analyze_oph_n2_pilot import (
     autocorrelation, connected, diagnostic, features, paired_bootstrap,
-    rank_folded_split_rhat, load_pilot,
+    rank_folded_split_rhat, load_pilot, replay_differences,
 )
 
 
@@ -27,6 +27,25 @@ class PilotTests(unittest.TestCase):
             self.assertEqual(result['candidate_gap'] is not None, period >= 10)
             if period == 8:
                 self.assertIn('transfer_extent_too_small_for_frozen_window', result['reasons'])
+
+    def test_replay_allows_roundoff_but_rejects_small_signal_changes(self):
+        expected = {'signal': [1e-11, -1e-16], 'covariance': 2e-24}
+        rounded = {'signal': [1e-11*(1+1e-13), -1e-16*(1-1e-13)], 'covariance': 2e-24*(1+1e-13)}
+        self.assertEqual(replay_differences(expected, rounded), [])
+        changed = deepcopy(expected); changed['signal'][0] += 1e-18
+        self.assertTrue(replay_differences(expected, changed))
+        changed = deepcopy(expected); changed['covariance'] = 0.0
+        self.assertTrue(replay_differences(expected, changed))
+        self.assertTrue(replay_differences(float('nan'), float('nan')))
+
+    def test_replay_requires_exact_decisions_provenance_and_structure(self):
+        expected = {'status': 'unresolved', 'sha256': 'abc', 'count': 4, 'gap': None, 'lags': [1, 2]}
+        for key, value in [('status', 'candidate'), ('sha256', 'abd'), ('count', 4.0),
+                           ('gap', 0.0), ('lags', [1])]:
+            changed = deepcopy(expected); changed[key] = value
+            self.assertTrue(replay_differences(expected, changed))
+        changed = deepcopy(expected); changed['extra'] = 0
+        self.assertTrue(replay_differences(expected, changed))
 
     def test_frozen_plan_rejects_geometry_protocol_budget_and_seed_mutants(self):
         self.assertEqual(validate_config(self.config)['total_sweeps'], 6144)

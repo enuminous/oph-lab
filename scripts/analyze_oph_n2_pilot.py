@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 import json
+import math
 from pathlib import Path
 import numpy as np
 from scipy.special import ndtri
@@ -26,6 +27,33 @@ SCALARS = ('psi_norm2_per_site', 'mean_conductance', 'matter_link_action_per_sit
            'real_plaquette_mean')
 ESTIMATORS = ('direct', 'rao_blackwell')
 FIELDS = ('sampled_slice_series', 'rao_blackwell_slice_series')
+REPLAY_REL_TOL = 1e-10
+REPLAY_ABS_TOL = 1e-30
+
+
+def replay_differences(expected, actual, path='$'):
+    """Exact structure/categories/hashes; bounded floating-point roundoff only.
+
+    The tiny absolute floor cannot swallow the ~1e-11 RB correlator signal.
+    This tolerance never changes a sampler or classifier decision threshold.
+    """
+    if type(expected) is not type(actual):
+        return [f'{path}: type mismatch']
+    if isinstance(expected, dict):
+        if expected.keys() != actual.keys():
+            return [f'{path}: key mismatch']
+        return [d for key in expected for d in replay_differences(expected[key], actual[key], f'{path}.{key}')]
+    if isinstance(expected, list):
+        if len(expected) != len(actual):
+            return [f'{path}: length mismatch']
+        return [d for i, (left, right) in enumerate(zip(expected, actual))
+                for d in replay_differences(left, right, f'{path}[{i}]')]
+    if isinstance(expected, float):
+        equal = (math.isfinite(expected) and math.isfinite(actual)
+                 and math.isclose(expected, actual, rel_tol=REPLAY_REL_TOL, abs_tol=REPLAY_ABS_TOL))
+    else:
+        equal = expected == actual
+    return [] if equal else [f'{path}: {expected!r} != {actual!r}']
 
 
 def autocorrelation(x):
@@ -268,7 +296,11 @@ def analyze(c, manifest, runs):
                           'shape_screen_only': screen,
                           'per_chain_connected_correlators': connected(f.mean(axis=1))[:, ei].tolist(),
                           'numerically_eligible_shape_candidate': not reasons and screen['candidate_gap'] is not None}
-    return {'schema_version': 'oph-n2-pilot-analysis-v1', 'experiment_id': c['experiment_id'],
+    return {'schema_version': 'oph-n2-pilot-analysis-v2', 'experiment_id': c['experiment_id'],
+            'replay_comparison': {'float_relative_tolerance': REPLAY_REL_TOL,
+                                  'float_absolute_tolerance': REPLAY_ABS_TOL,
+                                  'nonfloat_fields': 'exact',
+                                  'scope': 'platform_roundoff_only_not_statistical_tolerance'},
             'scope': 'exploratory_sampling_and_shape_screen_not_spectral_or_physical_identification',
             'config_sha256': manifest['config_sha256'], 'raw_runs': manifest['runs'],
             'analysis_sha256': sha(Path(__file__)),
@@ -301,8 +333,12 @@ def main():
     args = p.parse_args()
     c, manifest, runs = load_pilot(args.directory)
     receipt = analyze(c, manifest, runs)
-    if args.check and json.loads(args.check.read_text()) != json.loads(json.dumps(receipt, allow_nan=False)):
-        p.error('Analysis receipt differs; preserve old receipt and review any new analysis')
+    if args.check:
+        differences = replay_differences(json.loads(args.check.read_text()),
+                                        json.loads(json.dumps(receipt, allow_nan=False)))
+        if differences:
+            p.error('Analysis receipt differs beyond roundoff; preserve/review evidence: '
+                    + '; '.join(differences[:8]))
     if args.output:
         if args.output.exists():
             p.error('Refusing to replace existing analysis; choose a new path')

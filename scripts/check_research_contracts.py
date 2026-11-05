@@ -80,7 +80,9 @@ def main():
     source_hash = hashlib.sha256((ROOT/archive['corrected_smoke_source_path']).read_bytes()).hexdigest()
     if source_hash != archive['corrected_smoke_source_sha256']:
         errors.append('Archived smoke sampler changed')
-    for name, digest in archive['files'].items():
+    preserved_files = dict(archive['files'])
+    preserved_files.update(archive.get('portable_replay_archive', {}).get('files', {}))
+    for name, digest in preserved_files.items():
         if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != digest:
             errors.append(f'Preserved evidence changed: {name}')
     for path in (ROOT/'docs/data/oph_flux_v2').glob('L*_N*_seed*.json'):
