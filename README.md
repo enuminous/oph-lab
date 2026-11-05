@@ -384,9 +384,18 @@ The [independent (N=1) zero-flux check](docs/OPH_N1_ZERO_FLUX_INDEPENDENT_CHECK.
 
 ## Stage 3: independent N=2 flux-channel study
 
-The [four-dimensional N=2 flux-channel study](docs/OPH_N2_FLUX_STAGE3.md) adds an independent heat-bath implementation through L=8 and a Rao–Blackwell estimator for separated odd-flux correlations. It resolves neither a pole nor a clean no-pole result; the finite-volume run is exploratory and keeps the physical interpretation open.
+The [historical four-dimensional N=2 study](docs/OPH_N2_FLUX_STAGE3.md) contains
+an observable-axis defect, so its numbers are quarantined as evidence for the
+intended F01/axis-3 channel. The [corrected readout](docs/OPH_N2_READOUT_CORRECTION.md)
+has gauge/index tests and separate versioned raw smoke chains. Neither record
+establishes a physical pole or a clean no-pole conclusion.
 
 
 ## Stage 4: Lean formalization cores
 
 The [Stage 4 Lean formalization](docs/OPH_STAGE4_LEAN_FORMALIZATION.md) checks the abstract normalized-character selection rule and the algebraic step from a Mehler transfer relation to the lattice dispersion formula. The `formalization/oph-stage4/` Lake project and GitHub Actions workflow make the proof scope and build result inspectable. The explicit finite `U(1)^E` instantiation, full Mehler spectral theorem, and physical-time bridge remain open.
+
+The [November extension](docs/OPH_FINITE_PREMISES.md) adds five finite lemmas
+for the actual shift operator and graph action, with eleven theorems covered by
+the build-enforced axiom audit. The full torus Fourier and physical spectrum
+joins remain separate obligations.

@@ -5,10 +5,20 @@ on:
     paths:
       - 'formalization/oph-stage4/**'
       - '.github/workflows/oph-stage4-lean.yml'
+      - 'claims/**'
+      - 'tracking/**'
+      - 'README.md'
   pull_request:
     paths:
       - 'formalization/oph-stage4/**'
       - '.github/workflows/oph-stage4-lean.yml'
+      - 'claims/**'
+      - 'tracking/**'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
