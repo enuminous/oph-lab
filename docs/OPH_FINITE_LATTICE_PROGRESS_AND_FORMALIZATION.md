@@ -1,10 +1,95 @@
-# Finite-Lattice OPH Warm-Ups: Analytic Results, an Exploratory Flux Test, and Lean Cores
+# Finite OPH Readouts: Interactions, Identifiability, and Open Physical Premises
+
+> **2026-11-05 correction:** The October flux implementation used inconsistent link and coordinate axes. Its historical numerical rows are retained but their interpretation as the intended gauge-invariant F01 / axis-3 correlator is rejected. See [the correction and separate corrected raw runs](OPH_N2_READOUT_CORRECTION.md). No pole/no-pole or reflection-positivity conclusion can be drawn from those historical rows.
 
 **Matthew Chenoweth Wright**  
-**October 10, 2026**  
+**October 10, 2026; revised November 5, 2026**
 **Research progress report; not a claim of physical validation**
 
 ## Abstract
+
+The current fork now has executable finite-channel screening, a classical
+interacting field in three spatial dimensions and supplied model time,
+dimensionally typed transfer-gap/energy readouts, exact finite null-tensor
+tomography, stronger finite Lean cores, and inspectable observer/scheduler
+contracts. Independent source review found a coordinate-axis defect in the
+historical flux observable; those numbers are retained as a rejected readout
+of the intended channel. The corrected sampler has gauge/index tests and
+separately archived raw smoke chains. A new analytic result proves conditional
+and separated sine-flux vanishing in the declared N1 measure, without asserting
+that individual configurations have zero flux. These are finite mathematical
+and implementation results. Nature's particle identities, source-derived
+interacting quantum continuum, physical masses, Einstein dynamics and physical
+explanatory completeness remain unresolved.
+
+## November revision: strongest evidence and weakest claims
+
+The **best in, worst out** rule used here retains reproducible improvements and
+demotes claims contradicted by the executable record. It never replaces an
+unproved premise with a successful check of its consequence. The historical
+October account below remains an audit trail; the correction notice and this
+revision control its current interpretation.
+
+| Result | Evidence and scope | Remaining limitation |
+|---|---|---|
+| Corrected flux observable | Independent index-loop, gauge transformation and orientation tests; `F01-axis3-v2` raw trajectories | Smoke runs do not certify mixing or identify a particle |
+| N1 conditional sine-flux identity | Analytic link-integral/phase-cancellation proof, zero-amplitude cases, disjoint-slice factorization and executable controls | No claim of all configurations being flux-free; no N2 or upstream-source theorem |
+| Interacting classical 3+1D field | Supplied positive phi4 potential; observed refinement orders 1.9919–2.0040; unforced relative energy drift 8.96e-5 and ~4x improvement on half time step | Forced manufactured solution checks the solver; action, carrier and clock are inputs; quantum limit unproved |
+| Transfer gaps and energy | 15 independent finite precision-matrix inversion cases; maximum reconstructed gap error 7.22e-16 | Dimensionless transfer gaps are not measured masses; supplied calibration is conditional, unverified evidence |
+| Particle screen | Fixed noncontact window and synthetic negative controls; single-cosh fixture gives gap 0.4 | Shape matching does not prove a pole, species or no-pole exclusion |
+| Finite gravity identifiability | Exact rational rank 9/nullity 1 for symmetric 4x4 tensors; reconstruction modulo the Minkowski metric | Null data leave a metric-proportional component; conservation leaves one constant per connected component |
+| Finite Lean extension | Operator-character eigen-equation, half-angle identity and graph-action positivity/kernel criteria | Torus phase/basis join, product Haar/incidence, Mehler spectrum and source correspondence remain open |
+| Observer access | Hashed code/function inventory, geometry audit and exact finite observable partition refinement | A known memory law need not reveal hidden state; finite observability is not physical completeness |
+
+The [claim ledger](../claims/claim_registry.json) separates demonstrated finite
+results from unresolved physical conclusions. The [premise register](../tracking/premise_register.json)
+and [detailed finite inventory](OPH_FINITE_PREMISES.md) retain the open steps.
+The five new Lean declarations are accepted as machine checked only with a
+successful pinned build and axiom audit of the commit containing this revision.
+
+### Observer access and the completeness goal
+
+Observers may inspect simulator specifications, state/readback, scheduler,
+repair implementation and memory law wherever those artifacts exist. No
+artificial black-box restriction is imposed. The specification inventory names
+the available functions and hashes their bytes; missing canonical memory law
+and source-to-observable joins remain missing. Access to an authored law is
+evidence about that simulator. It does not show that nature implements it.
+
+The finite closure audit quantifies over the enumerated state space and every
+known finite scheduler word. Visible-only readout fails on a hidden-memory
+counterexample; exposing the entire declared state closes that example. Both
+retain `physical_completeness=UNRESOLVED`. EPR's original completeness condition
+asks for theoretical counterparts of elements of physical reality; our
+operational research goal additionally requires justified observable scope,
+measurement attachment and testable explanations. Neither criterion is settled
+by enumerating a finite software model. See Einstein, Podolsky and Rosen,
+[Physical Review 47, 777 (1935)](https://doi.org/10.1103/PhysRev.47.777).
+
+### Why the classical interacting test is bounded
+
+The manufactured source contains the chosen nonlinear term and checks numerical
+consistency against an exact forced trajectory. Interaction-off and unforced
+energy controls add independent implementation challenges, but no experimental
+particle labels enter this benchmark. A nontrivial quantum continuum requires
+separate construction and scaling evidence. In particular, Aizenman and
+Duminil-Copin prove Gaussian scaling limits for their specified critical 4D
+Ising/phi4 model classes; a finite nonlinear solver cannot overturn that result
+or claim a non-Gaussian continuum by inspection. We make no universal no-go
+claim beyond those hypotheses. See [Annals of Mathematics 194 (2021), 163–235](https://doi.org/10.4007/annals.2021.194.1.3).
+
+### Finite gravity and attestation limits
+
+Nine null contractions constrain nine of the ten symmetric tensor components.
+The kernel is precisely the metric direction in this declared flat algebraic
+problem. Connected finite-difference conservation can reduce its coefficient
+to a constant but cannot determine that constant. The manifest evaluator
+requires the selected route's continuum and stress/calibration/boundary
+artifacts, including collar and BW artifacts when that route is chosen; even complete declarations yield only `READY_FOR_REVIEW`. Artifact
+locators and independence fields are attestations, not automatically verified
+proofs. No physical G, Lambda or Einstein equation is emitted by this evaluator.
+
+## Historical October abstract (superseded where corrected above)
 
 This paper records four finite-lattice workstreams undertaken around Observer Patch Holography (OPH): (1) a heat-bath construction and transfer-spectrum derivation for a uniformly anchored periodic Gaussian scalar model; (2) an independent $U(1)$ character-orthogonality check relevant to a proposed zero-flux argument; (3) an exploratory four-dimensional $N=2$ flux-channel simulation; and (4) a small Lean formalization of reusable algebraic cores. The results are deliberately separated by evidential status. For the specified Gaussian model, conditional heat-bath updates preserve the target Gibbs law and the analytic transfer calculation gives the massive free-scalar lattice dispersion, conditional on a Mehler-kernel spectral relation. The Haar calculation projects onto zero net link exponent; it implies zero plaquette occupation only with an additional topology and boundary condition. The $N=2$ Monte Carlo run did not resolve a positive pole and does not establish a clean no-pole result. Lean verifies the abstract Haar selection rule, the algebra converting a transfer-cosh relation to the dispersion identity, and positivity and zero-momentum properties of the declared spatial symbol. It does not formalize the full Gaussian transfer spectrum, the explicit finite $U(1)^E$ model, or the $N=2$ simulation. None of these results identifies the transfer coordinate with physical time.
 
@@ -110,7 +195,7 @@ V(\psi,U,w)=m^2\sum_{x,s}|\psi_{s,x}|^2+
 
 Conductances were interpreted as independent Gamma(shape $\alpha$, rate $\beta$); the simulated point was $\alpha=2,\beta=1,m^2=1$. Exact coordinate conditionals were used for complex Gaussian matter, von Mises link phases, and Gamma conductances. The update sweep index is Monte Carlo time only.
 
-The observable was the imaginary part of an oriented $01$ plaquette, averaged over the three spatial coordinates on each direction-3 slice. The primary Rao–Blackwell estimator analytically averaged link phases conditional on matter and conductances. The direct and Rao–Blackwell estimates use the same chains and are not independent replications. The published repository contains the aggregate summary CSV, not the per-chain raw JSON series.
+The intended observable was the imaginary part of an oriented $01$ plaquette, averaged over the three spatial coordinates on each direction-3 slice. The November audit found that the historical implementation did not compute that observable; every historical numerical row below is quarantined. The primary Rao–Blackwell estimator analytically averaged link phases conditional on matter and conductances. The direct and Rao–Blackwell estimates use the same chains and are not independent replications. The published repository contains the aggregate summary CSV, not the per-chain raw JSON series.
 
 Runs used $L=4,6,8$, matched $N=1$ control and $N=2$ target, three independent seeds per $(L,N)$, 1,000 warm-up sweeps, 3,000 measurements per chain, two sweeps between measurements, and chain/circular-block bootstrap intervals over block lengths 50, 100, and 200 with 500 replicates. The exact upstream model revision and conductance convention are not pinned. In addition, initial direct-estimator summaries were inspected before selecting the lower-noise Rao–Blackwell estimator. This estimator choice is a documented post-selection risk; the run is exploratory, not blind confirmation.
 
@@ -129,9 +214,9 @@ The primary $C_N(1)$ estimates and envelope of the 95% block-bootstrap intervals
 
 At $N=2,L=8$, the Rao–Blackwell estimates at $t=1,2,3,4$ were respectively $(-2.20,-3.90,-1.86,-8.62)\times10^{-11}$. Intervals at $t=1,2,3$ included zero for every tested block length. At the opposite slice $t=4$, all three block-length intervals were negative; their envelope was $[-1.68\times10^{-10},-7.74\times10^{-12}]$. The direct estimator was much noisier and did not independently resolve the channel.
 
-No positive stable signal suitable for a transfer-gap fit was found. This is **not** a clean no-pole result: a pole with smaller residue is not excluded, no residue sensitivity threshold was preregistered, the source model dictionary remains unpinned, and the negative midpoint requires a reflection-positivity/parity analysis before a physical interpretation. The $N=1$ run is consistent with zero for the tested separated slice, but it does not replace an exact source-matched theorem.
+The original analysis found no positive stable signal suitable for a transfer-gap fit. That interpretation is superseded: the historical axis-defective observable cannot support a pole/no-pole or reflection-positivity inference about the intended channel. The intended N2 question remains unresolved. The new N1 conditional proof concerns the corrected declared measure and is a separate analytic result; it does not recover the unavailable historical raw chains or identify an upstream theorem.
 
-**Status:** exploratory numerical evidence; pole/no-pole classification unresolved. The full performance envelope is limited to the settings actually run. Parameter, boundary, aspect-ratio, and broad nuisance sweeps were not performed.
+**Current status:** rejected as evidence for the intended F01/axis-3 observable; historical numerical record only. Physical pole/no-pole classification unresolved. The full performance envelope is limited to the settings actually run. Parameter, boundary, aspect-ratio, and broad nuisance sweeps were not performed.
 
 ## 5. Lean formalization and build record
 
@@ -165,7 +250,7 @@ No independent physical labels are available in these workstreams. Missing prove
 
 ## 7. Conclusions and next proof obligations
 
-The defensible progress is narrow but concrete: an analytically solved uniformly anchored Gaussian specialization; an explicit $U(1)$ character projection theorem with a topology-sensitive flux interpretation; an exploratory $N=2$ simulation that resolves neither pole nor clean no-pole; and a pinned Lean build for abstract Haar, dispersion algebra, and spatial-symbol sign lemmas.
+The October record supplied an analytically solved uniformly anchored Gaussian specialization, a topology-sensitive character projection argument, and small Lean cores. The November revision rejects the historical N2 implementation as a readout of the intended channel, replaces it with a tested version, and adds the finite results in the revision table above. The physical pole/no-pole question remains unresolved.
 
 The next derivations with the best finite proof boundaries are:
 

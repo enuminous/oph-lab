@@ -1,5 +1,7 @@
 # Stage 3 — Independent 4D N=2 Flux-Channel Simulation
 
+> **2026-11-05 correction:** The October flux implementation used inconsistent link and coordinate axes. Its historical numerical rows are retained but their interpretation as the intended gauge-invariant F01 / axis-3 correlator is rejected. See [the correction and separate corrected raw runs](OPH_N2_READOUT_CORRECTION.md). No pole/no-pole or reflection-positivity conclusion can be drawn from those historical rows.
+
 **Date:** 2026-10-10  
 **Repository:** `enuminous/oph-lab`  
 **Status:** Exploratory independent implementation. It resolves neither a one-particle pole nor a clean no-pole result. No physical photon or Coulomb-phase claim is made.

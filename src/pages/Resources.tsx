@@ -1,4 +1,5 @@
 import { Explainer } from '../components/Explainer';
+import { ResearchReadouts } from '../components/ResearchReadouts';
 import {
     BLOG_URL,
     CHALLENGE_URL,
@@ -66,6 +67,8 @@ export function ResourcesPage() {
                 snapshot <strong>{RESEARCH_RELEASE_ID}</strong> ({RESEARCH_RELEASE_DATE}) and the finite
                 simulator boundary recorded with that snapshot.
             </p>
+
+            <ResearchReadouts />
 
             <div className="card" style={{ marginBottom: '24px', borderLeft: '3px solid var(--accent-gold)' }}>
                 <h4 style={{ margin: '0 0 8px', fontSize: '0.9em', color: 'var(--accent-gold)' }}>How the public surfaces fit together</h4>

@@ -1,0 +1,1002 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "implementation_sha256": "f14b0b05231d48ebcb5caa403a750129211379ab299f59351fa97a95763c012b",
+  "scope": "finite single-cosh shape screening, not discovery of nature's particles",
+  "policy_frozen_for": "synthetic implementation checks; retrospective for October Stage 3 data",
+  "input_sha256": "375f278bcf1a5ca4b09736259537da489aedf71781ffd9eb08ef3330d7c68c22",
+  "synthetic_controls": {
+    "exact_single_cosh": {
+      "schema_version": 1,
+      "source": "synthetic control: exact_single_cosh",
+      "period_transfer_sites": 16,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "single_cosh_shape_candidate",
+      "evidence_status": "supported but incomplete",
+      "reasons": [],
+      "missing_lags": [],
+      "nonpositive_lower_envelope_lags": [],
+      "effective_gaps": [
+        {
+          "lag": 2,
+          "gap": 0.3999999999999998,
+          "lower_envelope": 0.3999999999999998,
+          "upper_envelope": 0.3999999999999998
+        },
+        {
+          "lag": 3,
+          "gap": 0.40000000000000036,
+          "lower_envelope": 0.40000000000000036,
+          "upper_envelope": 0.40000000000000036
+        },
+        {
+          "lag": 4,
+          "gap": 0.3999999999999998,
+          "lower_envelope": 0.3999999999999998,
+          "upper_envelope": 0.3999999999999998
+        }
+      ],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": 0.39999999999999997,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": [
+        0.3999999999999998,
+        0.40000000000000036
+      ]
+    },
+    "two_gap_mixture": {
+      "schema_version": 1,
+      "source": "synthetic control: two_gap_mixture",
+      "period_transfer_sites": 16,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "effective_gap_not_stable_in_frozen_window",
+        "effective_gap_envelope_too_wide"
+      ],
+      "missing_lags": [],
+      "nonpositive_lower_envelope_lags": [],
+      "effective_gaps": [
+        {
+          "lag": 2,
+          "gap": 0.8424691720185674,
+          "lower_envelope": 0.8424691720185674,
+          "upper_envelope": 0.8424691720185674
+        },
+        {
+          "lag": 3,
+          "gap": 0.601267490590232,
+          "lower_envelope": 0.601267490590232,
+          "upper_envelope": 0.601267490590232
+        },
+        {
+          "lag": 4,
+          "gap": 0.3943130731402712,
+          "lower_envelope": 0.3943130731402712,
+          "upper_envelope": 0.3943130731402712
+        }
+      ],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": [
+        0.3943130731402712,
+        0.8424691720185674
+      ]
+    },
+    "zero_signal": {
+      "schema_version": 1,
+      "source": "synthetic control: zero_signal",
+      "period_transfer_sites": 16,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "positive_separated_signal_unresolved"
+      ],
+      "missing_lags": [],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null
+    },
+    "negative_signal": {
+      "schema_version": 1,
+      "source": "synthetic control: negative_signal",
+      "period_transfer_sites": 16,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "positive_separated_signal_unresolved"
+      ],
+      "missing_lags": [],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null
+    },
+    "imprecise_positive_signal": {
+      "schema_version": 1,
+      "source": "synthetic control: imprecise_positive_signal",
+      "period_transfer_sites": 16,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "gap_not_separated_from_zero"
+      ],
+      "missing_lags": [],
+      "nonpositive_lower_envelope_lags": [],
+      "effective_gaps": [
+        {
+          "lag": 2,
+          "gap": 0.3999999999999998,
+          "lower_envelope": 0.0,
+          "upper_envelope": 1.845050098520005
+        },
+        {
+          "lag": 3,
+          "gap": 0.40000000000000036,
+          "lower_envelope": 0.0,
+          "upper_envelope": 1.8450500985200051
+        },
+        {
+          "lag": 4,
+          "gap": 0.3999999999999998,
+          "lower_envelope": 0.0,
+          "upper_envelope": 1.845050098520005
+        }
+      ],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": [
+        0.0,
+        1.8450500985200051
+      ]
+    }
+  },
+  "stage3_channels": [
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=4, direct",
+      "period_transfer_sites": 4,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        3,
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=4, rao_blackwell",
+      "period_transfer_sites": 4,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        3,
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=6, direct",
+      "period_transfer_sites": 6,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=6, rao_blackwell",
+      "period_transfer_sites": 6,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=8, direct",
+      "period_transfer_sites": 8,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=1, L=8, rao_blackwell",
+      "period_transfer_sites": 8,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=4, direct",
+      "period_transfer_sites": 4,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        3,
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=4, rao_blackwell",
+      "period_transfer_sites": 4,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        3,
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=6, direct",
+      "period_transfer_sites": 6,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=6, rao_blackwell",
+      "period_transfer_sites": 6,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        4,
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=8, direct",
+      "period_transfer_sites": 8,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    },
+    {
+      "schema_version": 1,
+      "source": "legacy Stage 3 CSV: N=2, L=8, rao_blackwell",
+      "period_transfer_sites": 8,
+      "policy": {
+        "centers": [
+          2,
+          3,
+          4
+        ],
+        "max_relative_gap_spread": 0.05,
+        "max_relative_envelope_width": 0.25
+      },
+      "required_lags": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "contact_lag_used": false,
+      "finite_channel_status": "unresolved",
+      "evidence_status": "unresolved",
+      "reasons": [
+        "missing_required_lags",
+        "transfer_extent_too_small_for_frozen_window",
+        "positive_separated_signal_unresolved",
+        "legacy_operator_provenance_mismatch"
+      ],
+      "missing_lags": [
+        5
+      ],
+      "nonpositive_lower_envelope_lags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "effective_gaps": [],
+      "gap_units": "dimensionless per declared transfer lattice step",
+      "candidate_gap": null,
+      "interval_interpretation": "rectangular propagation of supplied envelopes; no joint confidence level asserted",
+      "physical_particle_identification": "unresolved",
+      "physical_particle_name": null,
+      "no_pole_exclusion": false,
+      "physical_obligations": [
+        "source-selected operator and action, with revision-pinned derivation",
+        "reflection positivity and transfer reconstruction for this operator parity",
+        "spin/statistics and charge representation, including gauge invariance",
+        "multi-operator and multi-volume spectral separation from thresholds",
+        "controlled interacting continuum and physical clock calibration",
+        "target-independent agreement with independently measured observables"
+      ],
+      "gap_envelope": null,
+      "provenance_status": "quarantined_axis_mismatch",
+      "provenance_limitation": "Historical sampler rolled component-selected links along axes 1,2 and averaged axes 1,2,3; documented F01 needs axes 0,1 and an axis-3 separation needs averaging axes 0,1,2. No corrected rerun or raw-chain recovery is inferred from this legacy CSV."
+    }
+  ],
+  "nonidentification_witness": {
+    "statement": "The same correlator can be assigned different spectator charge labels without changing this screen.",
+    "consequence": "Correlator shape alone does not identify spin, statistics, charge, or physical species."
+  }
+}

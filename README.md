@@ -45,6 +45,50 @@ The lab is a reader-facing guide to the OPH paper stack. Its job is to explain t
 
 ## Independent EFMW Zoo review (fork only)
 
+### Current fork research — November 5, 2026
+
+The [updated fork flagship](docs/OPH_FINITE_LATTICE_PROGRESS_AND_FORMALIZATION.md)
+now integrates six parallel readout/proof workstreams, a
+[machine-readable claim ledger](claims/claim_registry.json), and the
+[remaining premise register](tracking/premise_register.json). The broader
+source-selected interacting quantum theory, nature's particle identities,
+physical masses, gravity and EPR-style explanatory completeness remain unresolved.
+
+**Material correction:** the October N2 flux code used incorrect coordinate
+axes. Its old numerical rows are quarantined as measurements of the intended
+observable. See the [correction, gauge-invariance regression and new raw runs](docs/OPH_N2_READOUT_CORRECTION.md).
+
+| Workstream | Current artifact |
+|---|---|
+| Particle candidates and negative controls | [Finite-channel readouts](docs/OPH_PARTICLE_READOUTS.md) |
+| Interacting 3-space + model-time field | [Classical nonlinear benchmark](docs/OPH_INTERACTING_CONTINUUM_READOUTS.md) |
+| Transfer gaps, energy and calibrated units | [Mass/energy contracts](docs/OPH_MASS_ENERGY_READOUTS.md) |
+| Gravity and missing metric component | [Exact null tomography and requirements](docs/OPH_GRAVITY_REQUIREMENTS.md) |
+| Finite theorems and remaining assumptions | [Lean premise inventory](docs/OPH_FINITE_PREMISES.md) |
+| Observer, scheduler, repair and memory access | [Specification and completeness contract](docs/OPH_OBSERVER_SPEC_CONTRACT.md) |
+| New finite N1 result | [Conditional and separated sine-flux vanishing](docs/OPH_N1_CONDITIONAL_FLUX_IDENTITY.md) |
+
+The [parallel queue](tracking/parallel_work_queue.md) records the six workers
+and integration lane. GitHub Issues is disabled on this fork. These local
+artifacts do not replace or claim to update the upstream authors' ledger/papers.
+
+Reproduce the finite checks:
+
+```bash
+python -m pip install -r requirements-research.txt
+python -m unittest discover -s tests -v
+python scripts/check_research_contracts.py
+python scripts/oph_observer_contract.py --check docs/data/oph_observer_contract.json
+npm ci && npm run lint && npm run build
+cd formalization/oph-stage4
+lake exe cache get
+lake build OphStage4
+```
+
+The Resources page displays the fork ledger separately from the inherited
+upstream snapshot. Neither a green build nor a complete finite manifest is a
+certificate that the physical theory is complete.
+
 This fork includes an [independent EFMW Zoo review of OPH Lab](docs/EFMW_ZOO_REVIEW.md),
 covering selected audit criteria, two illustrative counterexamples, and proposed
 comparative experiments. It is not endorsed by the OPH authors, is not a

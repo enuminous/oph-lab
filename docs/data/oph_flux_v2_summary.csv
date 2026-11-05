@@ -1,0 +1,9 @@
+readout_version,inference_scope,N,L,separation,estimator,estimate,ci_low_block_envelope,ci_high_block_envelope,chains,measurements_per_chain,bootstrap_replicates_per_block,block_lengths_measurements
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,1,4,1,direct,-2.1220386224493766e-05,-0.00026069598473440694,0.00021231713295967046,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,1,4,2,direct,0.00013525512919324904,-0.0001145999335648618,0.0004019206483228087,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,1,4,1,rao_blackwell,-1.340332668144203e-41,-5.335610862633176e-41,3.0128998370587144e-41,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,1,4,2,rao_blackwell,6.973480066123375e-42,-6.541178506949001e-41,7.413230756392261e-41,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,2,4,1,direct,1.178881672377119e-05,-0.0003034104472341244,0.000271630672596242,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,2,4,2,direct,-0.00015855341825762943,-0.0004427816224497974,0.00024781677644277047,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,2,4,1,rao_blackwell,-5.2543731858300674e-11,-1.6417786736192204e-09,1.5757232567145315e-09,2,512,200,50;100;200
+F01-axis3-v2,exploratory_bootstrap_no_mixing_or_joint_coverage_certificate,2,4,2,rao_blackwell,-5.55694468513792e-10,-2.2329463779279575e-09,9.168015938741683e-10,2,512,200,50;100;200

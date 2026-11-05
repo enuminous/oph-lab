@@ -1,0 +1,301 @@
+{
+  "access_policy": {
+    "memory_law": "allowed",
+    "observer_implementation": "allowed",
+    "repair_law": "allowed",
+    "scheduler_implementation": "allowed",
+    "simulator_specs": "allowed"
+  },
+  "baseline_revision": "d498af3926c98889531bca425565867409103a99",
+  "completeness": {
+    "all_natures_observables_explained": false,
+    "reason": "Source accessibility and finite observer closure are scoped evidence; neither entails universal physical completeness.",
+    "status": "UNRESOLVED",
+    "unresolved": [
+      "source-selected microscopic repair and protected-memory laws",
+      "canonical simulator/observer implementation correspondence",
+      "physical clock and dimensional calibration",
+      "physical particle identity and observed mass attachment",
+      "interacting quantum continuum and gravity bridge premises",
+      "a justified exhaustive physical observable inventory and independent empirical tests"
+    ]
+  },
+  "finite_flux_geometry": {
+    "checks": {
+      "averaged_axes": true,
+      "conditional_delegate": true,
+      "default_plane_and_separation": true,
+      "direct_delegate": true,
+      "oriented_product": true,
+      "slice_readout": true
+    },
+    "observed": {
+      "averaged_axes": "tuple((axis for axis in range(4) if axis != transfer_axis))",
+      "conditional_delegate": "spatial_flux_slices(r)",
+      "default_mu_nu_transfer_axis": [
+        0,
+        1,
+        3
+      ],
+      "direct_delegate": "spatial_flux_slices(np.exp(1j * theta))",
+      "oriented_product": "links[mu] * np.roll(links[nu], -1, axis=mu) * np.conj(np.roll(links[mu], -1, axis=nu)) * np.conj(links[nu])",
+      "slice_readout": "np.imag(plaquette_product(links)).mean(axis=spatial_axes)"
+    },
+    "scope": "restricted_static_readout_geometry",
+    "scope_limit": "Does not execute Python, prove estimator validity, or identify physical time.",
+    "status": "PASS"
+  },
+  "finite_observer_counterexample": {
+    "declared_full_state_readback": {
+      "assumptions": [
+        "state table is exhaustive",
+        "transition functions are supplied and total",
+        "future scheduler-label sequence is known",
+        "declared observables are the tested scope"
+      ],
+      "behavior_classes": 4,
+      "counterexamples": [],
+      "model_sha256": "8474a40df731f52381917fd2969b85a02920d4d59865a4f2f4cb10b3fa5ac8b0",
+      "observable_names": [
+        "visible_bit"
+      ],
+      "physical_completeness": "UNRESOLVED",
+      "refinement_rounds": 1,
+      "scheduler_labels": [
+        "tick"
+      ],
+      "scope": "all_finite_scheduler_words_of_declared_deterministic_model",
+      "states": 4,
+      "status": "PASS"
+    },
+    "law": "(visible,memory) -> (memory,memory)",
+    "model": "authored four-state illustration; not an OPH microscopic memory law",
+    "specification_is_known_in_both_cases": true,
+    "visible_only": {
+      "assumptions": [
+        "state table is exhaustive",
+        "transition functions are supplied and total",
+        "future scheduler-label sequence is known",
+        "declared observables are the tested scope"
+      ],
+      "behavior_classes": 4,
+      "counterexamples": [
+        {
+          "differing_observables": [
+            "visible_bit"
+          ],
+          "same_readback_states": [
+            "00",
+            "01"
+          ],
+          "scheduler_word": [
+            "tick"
+          ],
+          "terminal_states": [
+            "00",
+            "11"
+          ],
+          "values": {
+            "visible_bit": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "differing_observables": [
+            "visible_bit"
+          ],
+          "same_readback_states": [
+            "10",
+            "11"
+          ],
+          "scheduler_word": [
+            "tick"
+          ],
+          "terminal_states": [
+            "00",
+            "11"
+          ],
+          "values": {
+            "visible_bit": [
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      "model_sha256": "ae9fac9286f5e512e392d9967eab22112bbfeaf22f1769e0f21a43d2e2910415",
+      "observable_names": [
+        "visible_bit"
+      ],
+      "physical_completeness": "UNRESOLVED",
+      "refinement_rounds": 1,
+      "scheduler_labels": [
+        "tick"
+      ],
+      "scope": "all_finite_scheduler_words_of_declared_deterministic_model",
+      "states": 4,
+      "status": "FAIL"
+    }
+  },
+  "implementation_inventory": [
+    {
+      "component": "finite_simulator_spec",
+      "description": "Complex matter, U(1) links, Gamma conductances on a periodic four-coordinate lattice.",
+      "source": "scripts/oph_n2_flux_mc.py",
+      "status": "IMPLEMENTED_AUTHORED_MODEL"
+    },
+    {
+      "component": "measurement_observer",
+      "description": "Direct and conditional F01 flux slices; readout function is not a biological observer model.",
+      "source": "scripts/oph_n2_flux_mc.py",
+      "status": "IMPLEMENTED_AUTHORED_READOUT"
+    },
+    {
+      "component": "scheduler",
+      "description": "Red/black site updates followed by link and conductance updates, warmup and thinning; sweeps are sampler time.",
+      "source": "scripts/oph_n2_flux_mc.py",
+      "status": "IMPLEMENTED_SAMPLER_SCHEDULE"
+    },
+    {
+      "component": "repair_law",
+      "description": "The authored Gibbs updates do not instantiate a source-selected canonical OPH accepted-repair law.",
+      "source": "scripts/oph_n2_flux_mc.py",
+      "status": "IMPLEMENTED_SUBSTITUTE_CONDITIONAL_KERNELS"
+    },
+    {
+      "component": "measurement_storage",
+      "description": "obs/rb_obs append slice arrays; CLI serializes a run. This does not prove protected microscopic memory.",
+      "source": "scripts/oph_n2_flux_mc.py",
+      "status": "IMPLEMENTED_TRANSIENT_RECORDS"
+    },
+    {
+      "component": "canonical_memory_law",
+      "description": "No canonical OPH memory-law implementation is instantiated in this audited source set.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "component": "reversible_wave_law",
+      "description": "A supplied leapfrog wave rule retains two field layers and uses a manufactured source; not derived from OPH repairs.",
+      "source": "scripts/oph_efmw_continuum_demo.py",
+      "status": "IMPLEMENTED_AUTHORED_MODEL"
+    }
+  ],
+  "legacy_readout": {
+    "actual_roll_axes": [
+      1,
+      2
+    ],
+    "actual_slice_axis": 0,
+    "historical_summary": "docs/data/oph_n2_flux_stage3_summary.csv",
+    "historical_summary_relabelled": false,
+    "intended_roll_axes": [
+      0,
+      1
+    ],
+    "intended_slice_axis": 3,
+    "reason": "Indexing theta[mu] removed the direction axis before coordinate rolls; averaging axes 1,2,3 left coordinate 0.",
+    "revision": "d498af3926c98889531bca425565867409103a99",
+    "status": "QUARANTINED_FOR_INTENDED_F01_AXIS3_CLAIMS"
+  },
+  "schema_version": "oph-observer-contract-v1",
+  "source_introspection_status": "PASS",
+  "source_pin_semantics": "sha256 fields identify inspected working-source bytes; baseline is historical context",
+  "sources": [
+    {
+      "bytes": 8399,
+      "path": "scripts/oph_n2_flux_mc.py",
+      "sha256": "9095261584aa5d66c34ac02ade7a66eb27b7cd3b24cca061c3c50a8f7ac631f8",
+      "status": "PASS",
+      "symbols": [
+        {
+          "line_end": 165,
+          "line_start": 44,
+          "name": "run",
+          "source_sha256": "daf897e6039e70ffbf3e126626e55e9dde34cffafd8c7a8cdaf8bb60d5ff85e5"
+        },
+        {
+          "line_end": 97,
+          "line_start": 60,
+          "name": "run.sweep",
+          "source_sha256": "01c44617079e7683608ab467b11d8da9be092322d15f2939f2f16df93352ba92"
+        },
+        {
+          "line_end": 101,
+          "line_start": 99,
+          "name": "run.flux_slice",
+          "source_sha256": "123f4ba4d0dbc50fdbaef92cbd647a6e35c3dfd4f217e4c7a85eba46fa8cd13f"
+        },
+        {
+          "line_end": 115,
+          "line_start": 103,
+          "name": "run.rb_flux_slice",
+          "source_sha256": "83957aebe3b17fa1b2256e64c6163b9c6e2f6699cfec9c4963e4af445103e467"
+        },
+        {
+          "line_end": 33,
+          "line_start": 19,
+          "name": "plaquette_product",
+          "source_sha256": "29423291857670b1255a10a96b7c2fbbeeed892393f4e00e88a693858d4e6816"
+        },
+        {
+          "line_end": 41,
+          "line_start": 36,
+          "name": "spatial_flux_slices",
+          "source_sha256": "ea5b142dec85806226d6e4bb1eb5cd88ece4ff5c4b3b6039ed5ebeb7a42f1a3f"
+        }
+      ]
+    },
+    {
+      "bytes": 2405,
+      "path": "scripts/oph_efmw_continuum_demo.py",
+      "sha256": "61e02c515c17279ebc4775213ea9543d6fca4873e29d00f4b7e7efc2bdd212b2",
+      "status": "PASS",
+      "symbols": [
+        {
+          "line_end": 50,
+          "line_start": 17,
+          "name": "test_resolution",
+          "source_sha256": "4f0166f113ffd97a150b916da1b88294a43add11bdbaa5f6abfff0512f8b6aa4"
+        },
+        {
+          "line_end": 31,
+          "line_start": 29,
+          "name": "test_resolution.lap",
+          "source_sha256": "b0477286a8392b577494f0d4b1f84d3d1bf098836b0766b073512892eea5b0e0"
+        },
+        {
+          "line_end": 28,
+          "line_start": 26,
+          "name": "test_resolution.S",
+          "source_sha256": "28e72259e7add73a65ab5f683ddf8e4d16f0865f6338a450a286fe502bfa0567"
+        }
+      ]
+    },
+    {
+      "bytes": 4915,
+      "path": "scripts/summarize_oph_flux.py",
+      "sha256": "85431f57f5c545573c2c5c1fa84f3611929f4921369a9653fd2e58dfebc87aa0",
+      "status": "PASS",
+      "symbols": [
+        {
+          "line_end": 41,
+          "line_start": 38,
+          "name": "estimate",
+          "source_sha256": "80b114c16a66729a695af2ec0dcf37ff2bcc2d4a4ea15e7c7e0ddea1703d0cad"
+        },
+        {
+          "line_end": 61,
+          "line_start": 44,
+          "name": "block_bootstrap",
+          "source_sha256": "abffed7442252f55d45050c8ecfc9f247bc4537c3d78e015260808db1a8043d6"
+        }
+      ]
+    }
+  ],
+  "verifier_source": {
+    "path": "scripts/oph_observer_contract.py",
+    "sha256": "309702df662ddc68a7da2724acb14882dd17fbf4a8c93e02a8c1fdbdafe0a595"
+  }
+}

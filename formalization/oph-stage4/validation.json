@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "scope": "local finite Lean core only; no physical-validation claim",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc4",
+  "mathlib_revision": "d3739f06187591e81887886ca767b6a2dc1416ea",
+  "checks": [
+    {
+      "command": "lake build OphStage4",
+      "result": "PASS",
+      "jobs": 2613
+    },
+    {
+      "command": "lake env lean OphStage4Audit.lean",
+      "result": "PASS",
+      "theorem_count": 11
+    },
+    {
+      "test": "copy of audit with Quot.sound removed from permitted list",
+      "result": "PASS",
+      "expected_lean_exit_code": 1,
+      "observed_message": "Unexpected axiom Quot.sound in OphLab.Stage4.trivial_character_integral"
+    }
+  ],
+  "source_sha256": {
+    "OphStage4.lean": "9cf77155c21957bc3a99971dd08282dcb5e96f836b47e0effcf94cfc7ae1a3c6",
+    "OphStage4Audit.lean": "ce067fecd8bb7eb79e193cfe49376f0f9c990f99c9d80cd2bbfa8bdf86f1dbc8",
+    "lakefile.lean": "b51aea8e83e87afd0cbe0ef5d135f16da58de17f1d5f3a0c6d43d041f28fd26f",
+    "lake-manifest.json": "8cfeeb1acc80b9b4bc476c748c2b6444d14f115e942a55291ce7b0cc9f0e3a7b",
+    "lean-toolchain": "8f89aa44fccdb1a0b6cc768c7c9f54b94cd40e47a08d582f82d1235f13075cf7"
+  },
+  "theorem_axioms": {
+    "OphLab.Stage4.trivial_character_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.nontrivial_character_integral_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.dispersion_of_transfer_cosh": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.latticeOmega_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.latticeOmega_zero_momentum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.latticeOmega_pos_of_positive_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.shiftLaplacian_character": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.cosineSymbol_eq_latticeOmega": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.graphAction_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.graphAction_eq_zero_iff_of_positive_anchor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OphLab.Stage4.graphAction_eq_zero_iff_edge_agreement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "ci_status": "Local receipt only. The GitHub Actions run for the publishing commit controls remote CI status."
+}

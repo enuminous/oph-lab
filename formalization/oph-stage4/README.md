@@ -1,46 +1,55 @@
-# OPH Stage 4 Lean cores
+# OPH finite Lean core
 
-This Lake project contains narrow proof targets extracted from the Stage 1
-and Stage 2 analyses.
+This pinned project proves finite mathematical statements used by the independent
+OPH Lab analyses. It does not identify nature's particles, derive physical time,
+or establish an interacting continuum theory.
 
-1. `normalized_character_integral` proves that a nontrivial integrable group
-   character has zero integral under a normalized left-invariant measure, and
-   that the trivial character integrates to one. This is the abstract Haar
-   selection rule. The explicit finite product `U(1)^E`, link-exponent
-   construction, and cell-complex incidence specialization are not yet
-   instantiated here.
-2. `dispersion_of_transfer_cosh` proves the algebraic conversion from the
-   transfer relation `cosh E = 1 + omega/(2j)` to
-   `4*j*sinh(E/2)^2 = omega`. It does not prove that the transfer operator is a
-   Mehler operator, that its Hermite eigenfunctions are complete, or that the
-   transfer coordinate is physical time.
-3. `latticeOmega` defines the finite-dimensional spatial dispersion symbol
-   `κ + 4 Σᵢ Jᵢ sin²(θᵢ/2)`. The accompanying lemmas prove nonnegativity for
-   nonnegative `κ` and couplings, strict positivity when `κ > 0`, and the
-   exact zero-momentum value `κ`. They do not prove that the anchored
-   Laplacian or transfer operator is diagonalized by this symbol.
+## Declarations and scope
 
-## Build
+| Declaration | What it establishes | Inputs still supplied |
+|---|---|---|
+| `trivial_character_integral` | A constant-one character has integral one | Normalized measure |
+| `nontrivial_character_integral_zero` | A nontrivial character has integral zero | Translation invariance and character law; explicit integrability hypothesis retained |
+| `dispersion_of_transfer_cosh` | Exact conversion to `4*j*sinh(E/2)^2 = omega` | The transfer-cosh relation and nonzero `j` |
+| `latticeOmega_nonneg` | Nonnegative declared spatial symbol | Nonnegative anchor and couplings |
+| `latticeOmega_zero_momentum` | Zero-momentum symbol equals the anchor `κ` | Declared symbol |
+| `latticeOmega_pos_of_positive_mass` | Positive symbol for positive anchor | `κ > 0`, nonnegative couplings; “mass” in this historical name means the anchor parameter |
+| `shiftLaplacian_character` | A group character is an exact eigenfunction of the explicitly defined nearest-neighbor shift operator | Group carrier, finite direction set, character, weights; a finite carrier gives a finite matrix |
+| `cosineSymbol_eq_latticeOmega` | Cosine and half-angle spatial symbols agree exactly | Declared real angles and weights |
+| `graphAction_nonneg` | Nonnegative finite weighted graph action | Nonnegative anchor and edge weights |
+| `graphAction_eq_zero_iff_of_positive_anchor` | Zero anchored action is equivalent to the zero field | Strictly positive anchor, nonnegative edge weights |
+| `graphAction_eq_zero_iff_edge_agreement` | Zero unanchored action is equivalent to agreement on every listed edge | Strictly positive edge weights; global constancy additionally needs graph connectedness |
 
-From this directory, run:
+The new operator theorem derives its eigen-equation from the character
+homomorphism law; the eigen-equation is not a hypothesis. It does not prove
+that the characters form a complete basis or instantiate the cyclic torus's
+character phases. The graph-action kernel results do not assume those kernels
+as premises. They also do not prove the identification between this action and
+the OPH source's repair law.
+
+## Reproduce
+
+From this directory:
 
 ```sh
-lake update
 lake exe cache get
-lake build
+lake build OphStage4
+lake env lean OphStage4Audit.lean
 ```
 
-The Lean and Mathlib revisions are pinned in `lean-toolchain` and `lakefile.lean`.
-The GitHub Actions workflow builds this project on changes under this directory.
+Do not run `lake update` for a frozen replay. Lean is pinned to
+`leanprover/lean4:v4.35.0-rc4`; Mathlib is pinned to
+`d3739f06187591e81887886ca767b6a2dc1416ea`, including the transitive lockfile.
+The standard `@[default_target]` syntax ensures plain `lake build` also builds
+the library. Its roots include the audit file.
 
-## Status and limits
+`OphStage4Audit.lean` prints the axiom dependencies of every public theorem.
+No project axiom or admitted proof is permitted. The ordinary foundational
+axioms `propext`, `Classical.choice`, and `Quot.sound` are disclosed by the
+audit; they do not discharge the hypotheses in the table.
+The audit's elaboration code fails the build if any other axiom appears.
+The [local validation receipt](validation.json) records the passing build,
+eleven axiom reports, source hashes, and a rejection control.
 
-The source-pinned OPH `N=1` theorem is still unavailable, so this formalization
-does not claim that the abstract character theorem proves Bernhard's intended
-zero-flux statement. Likewise, the dispersion lemma checks one algebraic step
-of the homogeneous periodic Gaussian calculation, not the full continuous
-transfer-spectrum proof. These boundaries are intentional.
-
-The spatial-symbol lemmas are finite algebraic checks. Their inputs are the
-declared symbol and coupling-sign conditions; derivation of the symbol from the
-operator remains a separate proof obligation.
+See [finite premise inventory](../../docs/OPH_FINITE_PREMISES.md) for the
+remaining proof obligations and the scientific boundary.

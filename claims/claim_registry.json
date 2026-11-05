@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "scope": "fork research ledger; upstream claims are not promoted or replaced",
+  "baseline_commit": "d498af3926c98889531bca425565867409103a99",
+  "updated": "2026-11-05",
+  "best_in_worst_out": "Retain the strongest reproducible evidence; remove or demote contradicted claims. Do not count tests or supplied attestations as physical validation.",
+  "physical_completion_status": "unresolved",
+  "claims": [
+    {
+      "id": "C-FLUX",
+      "title": "Corrected gauge-invariant flux readout",
+      "domain": "implementation",
+      "status": "demonstrated",
+      "scope": "Version F01-axis3-v2; algorithm and independent gauge/index tests only.",
+      "premises": [
+        "P-MODEL",
+        "P-REPLAY"
+      ],
+      "evidence": [
+        "scripts/oph_n2_flux_mc.py",
+        "docs/OPH_N2_READOUT_CORRECTION.md"
+      ],
+      "checks": [
+        "tests/test_flux_readout.py"
+      ]
+    },
+    {
+      "id": "C-N1",
+      "title": "N1 conditional and separated sine-flux vanishing",
+      "domain": "finite_mathematics",
+      "status": "demonstrated",
+      "scope": "Analytic proof for the declared one-species no-plaquette-action measure; excludes contact variance, individual configurations, N2 and upstream-source identification. Not Lean-checked.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "docs/OPH_N1_CONDITIONAL_FLUX_IDENTITY.md",
+        "scripts/oph_n2_flux_mc.py"
+      ],
+      "checks": [
+        "tests/test_n1_conditional_flux.py"
+      ]
+    },
+    {
+      "id": "C-CONTINUUM",
+      "title": "Interacting classical 3+1D field benchmark",
+      "domain": "numerical_model",
+      "status": "demonstrated",
+      "scope": "Manufactured nonlinear solution refinement and unforced Hamiltonian checks in supplied model units.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "scripts/oph_interacting_continuum.py",
+        "docs/data/oph_interacting_continuum.json"
+      ],
+      "checks": [
+        "tests/test_interacting_continuum.py"
+      ]
+    },
+    {
+      "id": "C-GAP",
+      "title": "Dimensionless Gaussian transfer gaps",
+      "domain": "numerical_model",
+      "status": "demonstrated",
+      "scope": "Declared Gaussian model; independent finite covariance inversion; conditional unit conversion verifies no physical premise.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "scripts/oph_mass_energy.py",
+        "docs/data/oph_mass_energy.json"
+      ],
+      "checks": [
+        "tests/test_mass_energy.py"
+      ]
+    },
+    {
+      "id": "C-SCREEN",
+      "title": "Fixed-window single-cosh shape screening",
+      "domain": "implementation",
+      "status": "demonstrated",
+      "scope": "Synthetic positive and negative controls; shape candidates are not physical particle identifications.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "scripts/oph_particle_readouts.py",
+        "docs/data/oph_particle_readouts.json"
+      ],
+      "checks": [
+        "tests/test_particle_readouts.py"
+      ]
+    },
+    {
+      "id": "C-NULL",
+      "title": "Finite null-tensor identifiability",
+      "domain": "finite_mathematics",
+      "status": "demonstrated",
+      "scope": "Exact rational rank-nine map on symmetric 4x4 tensors; one metric ambiguity remains.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "scripts/oph_gravity_requirements.py",
+        "docs/data/oph_gravity_requirements.json"
+      ],
+      "checks": [
+        "tests/test_gravity_requirements.py"
+      ]
+    },
+    {
+      "id": "C-LEAN",
+      "title": "Finite operator and graph-action proof extension",
+      "domain": "finite_mathematics",
+      "status": "demonstrated",
+      "scope": "Pinned Lean build and eleven-theorem axiom audit pass. Five new finite lemmas: conditional character eigen-equation, half-angle identity, and three graph-action positivity/kernel criteria. No complete Fourier/Mehler/physical spectrum claim.",
+      "premises": [
+        "P-FINITE"
+      ],
+      "evidence": [
+        "formalization/oph-stage4/OphStage4.lean",
+        "formalization/oph-stage4/OphStage4Audit.lean",
+        "docs/OPH_FINITE_PREMISES.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "C-OBSERVER",
+      "title": "Inspectable specifications and finite closure audit",
+      "domain": "implementation",
+      "status": "demonstrated",
+      "scope": "Hashed local implementation inventory and finite labelled-state observable closure; authored laws remain authored.",
+      "premises": [
+        "P-MODEL"
+      ],
+      "evidence": [
+        "scripts/oph_observer_contract.py",
+        "docs/data/oph_observer_contract.json"
+      ],
+      "checks": [
+        "tests/test_observer_contract.py"
+      ]
+    },
+    {
+      "id": "C-LEGACY",
+      "title": "October data identify the intended F01/axis3 channel",
+      "domain": "implementation",
+      "status": "rejected",
+      "scope": "Original numbers retained but invalid as measurements of the documented gauge-invariant observable.",
+      "premises": [
+        "P-LEGACY"
+      ],
+      "evidence": [
+        "docs/data/oph_n2_flux_stage3_summary.csv",
+        "docs/OPH_N2_READOUT_CORRECTION.md"
+      ],
+      "checks": [
+        "tests/test_flux_readout.py"
+      ]
+    },
+    {
+      "id": "C-NATURE",
+      "title": "Identification of nature's particles",
+      "domain": "physical",
+      "status": "unresolved",
+      "scope": "No physical species, measured mass hierarchy or pole exclusion established.",
+      "premises": [
+        "P-SOURCE",
+        "P-CLOCK",
+        "P-PARTICLE",
+        "P-QUANTUM"
+      ],
+      "evidence": [
+        "docs/OPH_PARTICLE_READOUTS.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "C-QUANTUM",
+      "title": "Source-derived interacting quantum continuum",
+      "domain": "physical",
+      "status": "unresolved",
+      "scope": "Classical phi4 numerical convergence does not establish a non-Gaussian quantum continuum.",
+      "premises": [
+        "P-SOURCE",
+        "P-CLOCK",
+        "P-QUANTUM"
+      ],
+      "evidence": [
+        "docs/OPH_INTERACTING_CONTINUUM_READOUTS.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "C-MASSES",
+      "title": "Physical particle masses and energies",
+      "domain": "physical",
+      "status": "unresolved",
+      "scope": "Calibrated conversions remain conditional; no source-derived physical pole masses emitted.",
+      "premises": [
+        "P-SOURCE",
+        "P-CLOCK",
+        "P-CALIBRATION",
+        "P-PARTICLE"
+      ],
+      "evidence": [
+        "docs/OPH_MASS_ENERGY_READOUTS.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "C-EINSTEIN",
+      "title": "Physical Einstein dynamics and gravitational constants",
+      "domain": "physical",
+      "status": "unresolved",
+      "scope": "Finite null tomography neither derives continuum gravity nor fixes its undetermined constant.",
+      "premises": [
+        "P-GRAVITY",
+        "P-LAMBDA",
+        "P-CALIBRATION"
+      ],
+      "evidence": [
+        "docs/OPH_GRAVITY_REQUIREMENTS.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "C-EPR",
+      "title": "Physical explanatory completeness",
+      "domain": "physical",
+      "status": "unresolved",
+      "scope": "Completeness of an enumerated finite software model does not imply all physical observables are explained.",
+      "premises": [
+        "P-SOURCE",
+        "P-MEMORY",
+        "P-EPR",
+        "P-QUANTUM",
+        "P-GRAVITY"
+      ],
+      "evidence": [
+        "docs/OPH_OBSERVER_SPEC_CONTRACT.md"
+      ],
+      "checks": []
+    }
+  ]
+}

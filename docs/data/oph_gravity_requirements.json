@@ -1,0 +1,331 @@
+{
+  "schema": "oph-gravity-readout-v1",
+  "metric_signature": "-+++",
+  "implementation_sha256": "44d189f1067b0e4acd17443b5b90270f52dee2fcd32d271799daaa4e24fccc58",
+  "evidence_status": "demonstrated_finite_algebra; physical_gravity_unresolved",
+  "tomography": {
+    "directions": [
+      [
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "1",
+        "3/5",
+        "4/5",
+        "0"
+      ],
+      [
+        "1",
+        "3/5",
+        "0",
+        "4/5"
+      ],
+      [
+        "1",
+        "0",
+        "3/5",
+        "4/5"
+      ]
+    ],
+    "rank": 9,
+    "symmetric_tensor_dimension": 10,
+    "nullity": 1,
+    "identifies_tensor_modulo_metric": true,
+    "identifies_full_tensor": false,
+    "readings": [
+      "9",
+      "5",
+      "5",
+      "13",
+      "19",
+      "7",
+      "253/25",
+      "397/25",
+      "397/25"
+    ],
+    "metric_shift": "7/3",
+    "shifted_readings_identical": true,
+    "reconstructed_H00_zero": [
+      [
+        "0",
+        "1",
+        "-2",
+        "3"
+      ],
+      [
+        "1",
+        "7",
+        "4",
+        "-1"
+      ],
+      [
+        "-2",
+        "4",
+        "9",
+        "2"
+      ],
+      [
+        "3",
+        "-1",
+        "2",
+        "13"
+      ]
+    ],
+    "reconstruction_readings_identical": true,
+    "only_axes_rank": 6
+  },
+  "conservation": {
+    "constant_connected": {
+      "status": "PASS",
+      "edge_residuals": [
+        "0",
+        "0"
+      ],
+      "components": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "connected": true,
+      "undetermined_constants": 1,
+      "determines_constant_value": false,
+      "scope": "finite scalar incidence check after a supplied conservation reduction"
+    },
+    "varying_connected": {
+      "status": "FAIL",
+      "edge_residuals": [
+        "1",
+        "-1"
+      ],
+      "components": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "connected": true,
+      "undetermined_constants": 1,
+      "determines_constant_value": false,
+      "scope": "finite scalar incidence check after a supplied conservation reduction"
+    },
+    "disconnected": {
+      "status": "PASS",
+      "edge_residuals": [
+        "0"
+      ],
+      "components": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "connected": false,
+      "undetermined_constants": 2,
+      "determines_constant_value": false,
+      "scope": "finite scalar incidence check after a supplied conservation reduction"
+    }
+  },
+  "requirements": {
+    "status": "UNRESOLVED",
+    "route": "tensor_limit",
+    "lambda_required": true,
+    "requirements": [
+      {
+        "id": "finite_tensor_interface",
+        "requirement": "A same-source symmetric 3+1 tensor interface and Lorentz metric",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "nine_direction_balances",
+        "requirement": "Nine spanning source-derived null-direction balances",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "ward_bianchi_conservation",
+        "requirement": "Compatible Ward/Bianchi conservation for the same tensors",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "connectedness",
+        "requirement": "Connected event domain with the required regularity",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "event_signal_clock",
+        "requirement": "Physical event, signal, volume, and clock identification",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "stress_vacuum",
+        "requirement": "Independently reconstructed physical stress and vacuum subtraction",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "coupling_scale",
+        "requirement": "Same-family coupling normalization and physical scale calibration",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "tensor_curvature_limit",
+        "requirement": "Controlled same-family rank-two tensor-curvature convergence",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "capacity_carrier",
+        "requirement": "Source-selected positive capacity carrier",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "same_invariant_capacity",
+        "requirement": "Construction/readback identify the same capacity invariant",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "horizon_saturation",
+        "requirement": "Physical horizon-record attachment and saturation",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      },
+      {
+        "id": "independent_gravity_test",
+        "requirement": "Frozen comparison with independent gravitational observations",
+        "evidence_status": "unresolved",
+        "missing": [
+          "evidence_not_demonstrated",
+          "missing_artifact",
+          "same_family_not_attested",
+          "target_independence_not_attested"
+        ]
+      }
+    ],
+    "blockers": [
+      "finite_tensor_interface",
+      "nine_direction_balances",
+      "ward_bianchi_conservation",
+      "connectedness",
+      "event_signal_clock",
+      "stress_vacuum",
+      "coupling_scale",
+      "tensor_curvature_limit",
+      "capacity_carrier",
+      "same_invariant_capacity",
+      "horizon_saturation",
+      "independent_gravity_test"
+    ],
+    "manifest_complete": false,
+    "physical_gravity_established": false,
+    "G_SI": null,
+    "Lambda_m_minus_2": null,
+    "boundary": "Manifest fields are attestations, not machine-verified physical evidence. A no-G scale certificate is a supplied calibration until independently attached."
+  },
+  "not_established": [
+    "source-derived physical tensor",
+    "Einstein dynamics",
+    "measured Newton coupling",
+    "source-selected cosmological constant"
+  ]
+}

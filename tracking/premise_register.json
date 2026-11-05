@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "scope": "enuminous/oph-lab fork only; not the upstream OPH premise register",
+  "baseline_commit": "d498af3926c98889531bca425565867409103a99",
+  "updated": "2026-11-05",
+  "premises": [
+    {
+      "id": "P-MODEL",
+      "status": "supplied",
+      "statement": "The finite scalar/matter-link-Gamma actions, carrier, boundary and coupling conventions are declared model inputs.",
+      "evidence": [
+        "scripts/oph_n2_flux_mc.py"
+      ]
+    },
+    {
+      "id": "P-FINITE",
+      "status": "proved_finite",
+      "statement": "Pinned local Lean build and eleven-theorem foundational axiom audit pass for the exact declared finite statements; no claim of closure of other finite or physical premises.",
+      "evidence": [
+        "formalization/oph-stage4/OphStage4.lean",
+        "formalization/oph-stage4/OphStage4Audit.lean"
+      ]
+    },
+    {
+      "id": "P-SOURCE",
+      "status": "unresolved",
+      "statement": "Derive or source-select the complete action/operator from a revision-pinned OPH source contract; no measured-target selection.",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    {
+      "id": "P-CLOCK",
+      "status": "unresolved",
+      "statement": "Identify the model or transfer coordinate with an independently calibrated physical clock; sampler updates are excluded.",
+      "evidence": [
+        "docs/OPH_MASS_ENERGY_READOUTS.md"
+      ]
+    },
+    {
+      "id": "P-PARTICLE",
+      "status": "unresolved",
+      "statement": "Establish spin/statistics, gauge charge, operator parity, spectral separation and independent physical identification.",
+      "evidence": [
+        "docs/OPH_PARTICLE_READOUTS.md"
+      ]
+    },
+    {
+      "id": "P-QUANTUM",
+      "status": "unresolved",
+      "statement": "Construct an interacting continuum with controlled cutoff/volume limits, reconstruction/positivity and quantum observables.",
+      "evidence": [
+        "docs/OPH_INTERACTING_CONTINUUM_READOUTS.md"
+      ]
+    },
+    {
+      "id": "P-CALIBRATION",
+      "status": "unresolved",
+      "statement": "Supply verified target-independent spectral and SI-scale calibration, physical dispersion and mass scheme.",
+      "evidence": [
+        "docs/OPH_MASS_ENERGY_READOUTS.md"
+      ]
+    },
+    {
+      "id": "P-GRAVITY",
+      "status": "unresolved",
+      "statement": "Realize the selected route's same-family continuum/stress premises, collar/BW inputs when that route is selected, and reconstruct the full tensor beyond null contractions.",
+      "evidence": [
+        "docs/OPH_GRAVITY_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "P-LAMBDA",
+      "status": "unresolved",
+      "statement": "Fix the undetermined metric-proportional component using independent boundary/global data.",
+      "evidence": [
+        "docs/OPH_GRAVITY_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "P-MEMORY",
+      "status": "unresolved",
+      "statement": "Supply a source-selected memory/repair law and demonstrate agreement with observer-accessible measurements.",
+      "evidence": [
+        "docs/OPH_OBSERVER_SPEC_CONTRACT.md"
+      ]
+    },
+    {
+      "id": "P-EPR",
+      "status": "unresolved",
+      "statement": "Provide a justified physical observable domain, complete empirical attachment and explanatory coverage; finite test coverage is insufficient.",
+      "evidence": [
+        "docs/OPH_OBSERVER_SPEC_CONTRACT.md"
+      ]
+    },
+    {
+      "id": "P-HAAR",
+      "status": "unresolved",
+      "statement": "Instantiate product U(1)^E Haar, character charges and actual cell-complex incidence/topology.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-MEHLER",
+      "status": "unresolved",
+      "statement": "Prove transfer-operator domain, Mehler spectrum and complete eigenbasis rather than assume its cosh relation.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-LEGACY",
+      "status": "rejected",
+      "statement": "Historical F01/axis3 interpretation conflicts with executable coordinate axes; raw chains unavailable.",
+      "evidence": [
+        "docs/OPH_N2_READOUT_CORRECTION.md"
+      ]
+    },
+    {
+      "id": "P-REPLAY",
+      "status": "verified_numerically",
+      "statement": "Corrected F01/axis3 implementation passes direct-index and gauge controls; raw smoke runs carry implementation hashes.",
+      "evidence": [
+        "tests/test_flux_readout.py"
+      ]
+    },
+    {
+      "id": "P-FOURIER",
+      "status": "unresolved",
+      "statement": "Instantiate periodic-torus characters, join complex characterSymbol to the real cosine symbol, and prove a complete finite Fourier basis.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-GIBBS",
+      "status": "unresolved",
+      "statement": "Formalize finite precision/action correspondence, Gaussian normalization and heat-bath invariance rather than assume them in a transfer theorem.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-INCIDENCE",
+      "status": "unresolved",
+      "statement": "Construct the integer edge/face incidence map and prove the actual link exponents equal its image.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-TOPOLOGY",
+      "status": "unresolved",
+      "statement": "Supply a concrete cell complex and prove any required boundary-map injectivity; do not discard nonzero cycles.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-CONNECTED",
+      "status": "unresolved",
+      "statement": "Upgrade graph edge agreement to global constancy by a path proof on the actual connected graph.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-LIVENESS",
+      "status": "unresolved",
+      "statement": "Prove termination/fairness for all allowed repair schedules; decreasing real potential alone does not suffice.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    },
+    {
+      "id": "P-GLUING",
+      "status": "unresolved",
+      "statement": "Construct local repair completeness and quotient-compatible collar gluing for the actual finite source.",
+      "evidence": [
+        "docs/OPH_FINITE_PREMISES.md"
+      ]
+    }
+  ]
+}

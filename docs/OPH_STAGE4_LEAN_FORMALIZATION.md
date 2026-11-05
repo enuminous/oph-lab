@@ -1,5 +1,7 @@
 # OPH Stage 4 — Lean formalization cores
 
+> **Current extension:** See [Finite premise inventory](OPH_FINITE_PREMISES.md) for the new finite operator/action theorems, axiom audit, and exact remaining obligations. The account below records the October core and its boundaries.
+
 **Scope:** machine-checkable lemmas extracted from the finite-lattice Haar and
 anchored-Laplacian analyses. This stage formalizes exact mathematical cores; it
 does not validate a physical interpretation.
