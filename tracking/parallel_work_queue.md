@@ -21,3 +21,18 @@ historical data are retained as a rejected readout of the intended observable;
 the corrected smoke chains are separately versioned and archived. Completion
 of these deliverables does not close the scientific column. The machine-readable
 [premise register](premise_register.json) is the open-obligation list.
+
+## Follow-up: OPH-N2-PILOT-1
+
+The [corrected N2 pilot](../docs/OPH_N2_PARTICLE_PILOT.md) is implemented and
+executed after the parallel integration. Its four L=12 chains use distinct
+hot/cold seeds, 512 warmup sweeps and 1,024 retained measurements. Source,
+configuration and raw-output hashes, paired block-bootstrap analysis,
+autocorrelation/ESS/R-hat checks and timing probes are archived separately.
+
+Implementation/provenance checks are complete. Numerical convergence and the
+finite gap remain **unresolved**: all required lag envelopes include zero and
+one chain has a direct mean-flux half-chain drift alarm. Fresh longer chains,
+larger volumes, operator/transfer reconstruction and physical attachment remain
+open under `P-N2-SAMPLING`, `P-N2-SPECTRUM` and the existing physical premises.
+No GitHub issue was created; this is a repository work-item ID.

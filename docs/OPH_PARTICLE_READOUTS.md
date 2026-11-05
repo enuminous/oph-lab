@@ -92,8 +92,8 @@ confidence analysis is claimed.
 
 | Obligation | Present evidence | Status |
 |---|---|---|
-| Specified finite operator and estimator | Definition available; historical implementation axes mismatch | Historical CSV quarantined; corrected implementation needs new runs |
-| Stable single-channel shape on physical source | No resolved positive Stage 3 signal | Unresolved |
+| Specified finite operator and estimator | Historical axes mismatch; corrected gauge/index controls and new L12 pilot | Historical CSV quarantined; corrected finite implementation tested |
+| Stable single-channel shape in the corrected finite model | Corrected L12 pilot has all five envelopes crossing zero in both estimators | Unresolved; source-to-physics attachment also remains open |
 | Transfer positivity for the operator's reflection parity | Not provided by the classifier | Unresolved |
 | Spin, statistics, charges and gauge-invariant observable dictionary | Not read from a scalar two-point shape | Unresolved |
 | Separation from multiparticle thresholds; other operators and volumes | Absent from present receipt | Unresolved |
@@ -107,6 +107,16 @@ derivation and independent observational tests. Access to the code does not
 erase those attachment obligations.
 
 ## Reproduction
+
+The [corrected N2 pilot](OPH_N2_PARTICLE_PILOT.md) now bridges versioned raw
+chains to this **unchanged** classifier. The minimum even transfer extent is
+10; the pilot uses 12 and proposes independent larger-volume follow-up at 16.
+Four chains (512 warmup/1,024 retained measurements each) give no positive
+required-lag envelope and no gap. A separate mean-flux drift alarm also leaves
+the numerical gate unresolved. See the pilot instructions for diagnostic
+thresholds, exact new-run commands, measured costs and preserved raw data.
+The historical receipt below remains unchanged; it is not overwritten with
+new pilot results.
 
 ```bash
 python -m unittest discover -s tests -p 'test_particle_readouts.py' -v

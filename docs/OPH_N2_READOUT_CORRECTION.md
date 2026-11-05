@@ -67,3 +67,18 @@ python scripts/summarize_oph_flux.py docs/data/oph_flux_v2 \
 
 The scope of this correction is the independent fork sampler. It does not
 assert that upstream OPH sources contain the same defect.
+
+## Subsequent bounded experiment
+
+The [N2 particle-channel pilot](OPH_N2_PARTICLE_PILOT.md) adds chain diagnostics
+and executes four new L=12 runs using the same corrected F01/axis-3 operator.
+The observable remains `F01-axis3-v2`; diagnostic records use the expanded raw
+schema `oph-flux-chain-v3`. All five required lag envelopes include zero for
+both estimators and one direct mean-flux drift alarm remains. No stable gap or
+particle is established. Its longer-run/volume proposal is not executed here.
+
+The four L=4 smoke files and their summary above remain byte-for-byte intact.
+The [preservation manifest](../experiments/oph_n2/preserved_evidence.json) and
+exact archived smoke-sampler source bind them to the implementation that
+actually generated them; later instrumentation does not invalidate or rewrite
+that historical provenance.

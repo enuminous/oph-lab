@@ -1,0 +1,56 @@
+{
+  "budget": {
+    "chains": 4,
+    "raw_slice_values": 98304,
+    "scientific_scope": "bounded_sampling_and_sensitivity_pilot_not_confirmatory_spectrum",
+    "total_link_updates": 509607936,
+    "total_sweeps": 6144,
+    "transfer_extent": 12,
+    "volume": 20736
+  },
+  "config_sha256": "1477cc9532f2522ac10e945303e2dddcb2b87be4675315a4085b95561b9e3627",
+  "experiment_id": "N2-F01-L12-pilot-20261105-v1",
+  "git_parent_revision": "693e574aa1519d5785c1c30ae2283eda6c423786",
+  "git_tree_dirty_at_start": true,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python_version": "3.12.14",
+  "runs": [
+    {
+      "elapsed_seconds": 78.8475442820054,
+      "path": "L12_N2_seed20261105101.json",
+      "seed": 20261105101,
+      "sha256": "56b2481bdde1a1d511e52fc5d27034f057e78def39d7038db39fdb0833e064ae",
+      "start": "hot"
+    },
+    {
+      "elapsed_seconds": 77.95814092100045,
+      "path": "L12_N2_seed20261105102.json",
+      "seed": 20261105102,
+      "sha256": "dfbf0e8a09d62f264573ac9708bb060345ed41904dab31b12515b42284f43fb3",
+      "start": "cold"
+    },
+    {
+      "elapsed_seconds": 81.0433631440028,
+      "path": "L12_N2_seed20261105103.json",
+      "seed": 20261105103,
+      "sha256": "620a76250372ec7577aadd52c73d5ebc162a2f42ad45171a8bee799c982478f0",
+      "start": "hot"
+    },
+    {
+      "elapsed_seconds": 84.77088051500323,
+      "path": "L12_N2_seed20261105104.json",
+      "seed": 20261105104,
+      "sha256": "a0136e9b43c8bc485053c8b728e0df88c9cd5f02ef557ae70faf61c078679a5a",
+      "start": "cold"
+    }
+  ],
+  "schema_version": "oph-n2-pilot-manifest-v1",
+  "source_sha256": {
+    "requirements-research.txt": "7ecd46ee90bde400b76bba8d7f22b990c429e0be9015247643e5be1cb7dce077",
+    "scripts/oph_n2_flux_mc.py": "1306699382b830a45dd72de16426ccf229077e5fe82c50879f534a5af77f7e84",
+    "scripts/oph_particle_readouts.py": "f14b0b05231d48ebcb5caa403a750129211379ab299f59351fa97a95763c012b",
+    "scripts/run_oph_n2_pilot.py": "e109a2cb8bdc647e7e35f4b99abf8f2aabfa76a764607a89428a9674460bc1e3"
+  },
+  "status": "complete",
+  "total_wall_seconds": 322.77233266999974
+}

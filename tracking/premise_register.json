@@ -180,6 +180,24 @@
       "evidence": [
         "docs/OPH_FINITE_PREMISES.md"
       ]
+    },
+    {
+      "id": "P-N2-SAMPLING",
+      "status": "unresolved",
+      "statement": "Corrected N2 correlator needs resolved positive noncontact signal, initialization/length agreement, reliable autocorrelation/errors and independent larger-volume replication; L12 pilot has nonpositive lower envelopes and a direct mean-flux half-chain drift alarm.",
+      "evidence": [
+        "docs/data/oph_n2_pilot_v1/analysis.json",
+        "docs/OPH_N2_PARTICLE_PILOT.md"
+      ]
+    },
+    {
+      "id": "P-N2-SPECTRUM",
+      "status": "unresolved",
+      "statement": "Establish operator reflection parity, positive transfer reconstruction and spectral isolation from excited/multiparticle contributions; a finite cosh shape alone is insufficient.",
+      "evidence": [
+        "docs/OPH_N2_PARTICLE_PILOT.md",
+        "docs/OPH_PARTICLE_READOUTS.md"
+      ]
     }
   ]
 }

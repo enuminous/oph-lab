@@ -74,10 +74,36 @@ def main():
     particle = json.loads((ROOT/'docs/data/oph_particle_readouts.json').read_text())
     if particle['input_sha256'] != hashlib.sha256((ROOT/'docs/data/oph_n2_flux_stage3_summary.csv').read_bytes()).hexdigest():
         errors.append('Legacy data hash changed without reviewed particle receipt')
+    # Historical evidence binds to its exact archived source, not today's code.
+    # Do not rewrite old measurements merely to make a current hash check green.
+    archive = json.loads((ROOT/'experiments/oph_n2/preserved_evidence.json').read_text())
+    source_hash = hashlib.sha256((ROOT/archive['corrected_smoke_source_path']).read_bytes()).hexdigest()
+    if source_hash != archive['corrected_smoke_source_sha256']:
+        errors.append('Archived smoke sampler changed')
+    for name, digest in archive['files'].items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != digest:
+            errors.append(f'Preserved evidence changed: {name}')
     for path in (ROOT/'docs/data/oph_flux_v2').glob('L*_N*_seed*.json'):
         run = json.loads(path.read_text())
-        if run['provenance']['implementation_sha256'] != hashlib.sha256((ROOT/'scripts/oph_n2_flux_mc.py').read_bytes()).hexdigest():
+        if run['provenance']['implementation_sha256'] != source_hash:
             errors.append(f'Stale raw-run implementation: {path.name}')
+    if __package__:
+        from .analyze_oph_n2_pilot import load_pilot
+    else:
+        from analyze_oph_n2_pilot import load_pilot
+    try:
+        directory = ROOT/'docs/data/oph_n2_pilot_v1'
+        _, manifest, _ = load_pilot(directory)
+        for name, digest in manifest['source_sha256'].items():
+            if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != digest:
+                errors.append(f'Pilot source changed: {name}; preserve/review source before rerunning')
+        if hashlib.sha256((ROOT/'experiments/oph_n2/pilot_v1.json').read_bytes()).hexdigest() != manifest['config_sha256']:
+            errors.append('Frozen pilot configuration changed')
+        analysis = json.loads((directory/'analysis.json').read_text())
+        if analysis['analysis_sha256'] != hashlib.sha256((ROOT/'scripts/analyze_oph_n2_pilot.py').read_bytes()).hexdigest():
+            errors.append('Pilot analysis receipt stale')
+    except (ValueError, KeyError, OSError) as exc:
+        errors.append(f'Pilot evidence invalid: {exc}')
     if errors:
         raise SystemExit('\n'.join(errors))
     print(f"Research contracts PASS (structural integrity only): {len(ledger['claims'])} scoped claims, {len(register['premises'])} premises; physical completion UNRESOLVED")

@@ -1,0 +1,148 @@
+{
+  "benchmark_sha256": "5c6d15f30977bbcd29d18d58b086947f501279a1efe8f0731fc23f6a2d9493c6",
+  "limits": "Short timings include readout/diagnostic cost and cold-start process effects. No scaling, mixing, effective-sample or hardware guarantee; reserve 2x wall-time margin. RSS is peak per isolated process on Linux, not an extrapolated full-run bound.",
+  "machine": "x86_64",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python_version": "3.12.14",
+  "rows": [
+    {
+      "L": 10,
+      "measurement_seconds_per_sweep_median": 0.030559734062535426,
+      "measurement_seconds_per_sweep_range": [
+        0.029102715187491413,
+        0.037186623249908735
+      ],
+      "probes": [
+        {
+          "L": 10,
+          "measurement_seconds_per_sweep_including_readouts": 0.029102715187491413,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 48648,
+          "seed": 20261105900,
+          "total_seconds": 1.1936492129971157,
+          "warmup_seconds_per_sweep_including_initialization": 0.016397530875110533,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 10,
+          "measurement_seconds_per_sweep_including_readouts": 0.030559734062535426,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 48656,
+          "seed": 20261105901,
+          "total_seconds": 1.32753907499864,
+          "warmup_seconds_per_sweep_including_initialization": 0.021851644624803157,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 10,
+          "measurement_seconds_per_sweep_including_readouts": 0.037186623249908735,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 48212,
+          "seed": 20261105902,
+          "total_seconds": 1.4574408760017832,
+          "warmup_seconds_per_sweep_including_initialization": 0.01671672181237227,
+          "warmup_sweeps": 16
+        }
+      ],
+      "projected_four_chain_long_run_seconds": 1138.3247508481145,
+      "projected_four_chain_pilot_seconds": 159.40851699188352,
+      "raw_state_bytes_lower_bound": 960000,
+      "volume": 10000,
+      "warmup_seconds_per_sweep_median": 0.01671672181237227
+    },
+    {
+      "L": 12,
+      "measurement_seconds_per_sweep_median": 0.06544073712484533,
+      "measurement_seconds_per_sweep_range": [
+        0.0601460679063166,
+        0.06701666549997753
+      ],
+      "probes": [
+        {
+          "L": 12,
+          "measurement_seconds_per_sweep_including_readouts": 0.06701666549997753,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 53412,
+          "seed": 20261105920,
+          "total_seconds": 2.7457786739978474,
+          "warmup_seconds_per_sweep_including_initialization": 0.037577725937353534,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 12,
+          "measurement_seconds_per_sweep_including_readouts": 0.0601460679063166,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 53532,
+          "seed": 20261105921,
+          "total_seconds": 2.4869517080005608,
+          "warmup_seconds_per_sweep_including_initialization": 0.035142271499807975,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 12,
+          "measurement_seconds_per_sweep_including_readouts": 0.06544073712484533,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 52956,
+          "seed": 20261105922,
+          "total_seconds": 2.688242361997254,
+          "warmup_seconds_per_sweep_including_initialization": 0.03713357199967504,
+          "warmup_sweeps": 16
+        }
+      ],
+      "projected_four_chain_long_run_seconds": 2448.5602959282696,
+      "projected_four_chain_pilot_seconds": 344.09481471870095,
+      "raw_state_bytes_lower_bound": 1990656,
+      "volume": 20736,
+      "warmup_seconds_per_sweep_median": 0.03713357199967504
+    },
+    {
+      "L": 16,
+      "measurement_seconds_per_sweep_median": 0.19426237056245554,
+      "measurement_seconds_per_sweep_range": [
+        0.18594769950004775,
+        0.20258392900018407
+      ],
+      "probes": [
+        {
+          "L": 16,
+          "measurement_seconds_per_sweep_including_readouts": 0.20258392900018407,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 67992,
+          "seed": 20261105960,
+          "total_seconds": 8.370001181996486,
+          "warmup_seconds_per_sweep_including_initialization": 0.11795709068746874,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 16,
+          "measurement_seconds_per_sweep_including_readouts": 0.19426237056245554,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 67136,
+          "seed": 20261105961,
+          "total_seconds": 7.7832925069960766,
+          "warmup_seconds_per_sweep_including_initialization": 0.09793094287488202,
+          "warmup_sweeps": 16
+        },
+        {
+          "L": 16,
+          "measurement_seconds_per_sweep_including_readouts": 0.18594769950004775,
+          "measurements": 32,
+          "peak_process_rss_kib_linux": 67928,
+          "seed": 20261105962,
+          "total_seconds": 7.664912649997859,
+          "warmup_seconds_per_sweep_including_initialization": 0.10716155081263423,
+          "warmup_sweeps": 16
+        }
+      ],
+      "projected_four_chain_long_run_seconds": 7243.456782847643,
+      "projected_four_chain_pilot_seconds": 1015.1655258880928,
+      "raw_state_bytes_lower_bound": 6291456,
+      "volume": 65536,
+      "warmup_seconds_per_sweep_median": 0.10716155081263423
+    }
+  ],
+  "schema_version": "oph-n2-timing-v1",
+  "scope": "timing_only_no_spectral_evidence",
+  "source_sha256": "1306699382b830a45dd72de16426ccf229077e5fe82c50879f534a5af77f7e84",
+  "visible_cpus": 9
+}

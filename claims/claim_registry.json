@@ -93,6 +93,46 @@
       ]
     },
     {
+      "id": "C-N2-PILOT",
+      "title": "Reproducible corrected N2 sampling pilot",
+      "domain": "implementation",
+      "status": "demonstrated",
+      "scope": "Four versioned L12 chains, diagnostic and paired-bootstrap pipeline, fixed classifier bridge, cost probes and immutable historical evidence. This establishes execution/provenance only; numerical convergence and a positive gap remain unresolved.",
+      "premises": [
+        "P-MODEL",
+        "P-REPLAY"
+      ],
+      "evidence": [
+        "experiments/oph_n2/pilot_v1.json",
+        "docs/OPH_N2_PARTICLE_PILOT.md",
+        "docs/data/oph_n2_pilot_v1/manifest.json",
+        "docs/data/oph_n2_pilot_v1/analysis.json",
+        "docs/data/oph_n2_timing_v1.json"
+      ],
+      "checks": [
+        "tests/test_n2_pilot.py",
+        "tests/test_flux_readout.py"
+      ]
+    },
+    {
+      "id": "C-N2-GAP",
+      "title": "Stable corrected N2 transfer gap",
+      "domain": "numerical_model",
+      "status": "unresolved",
+      "scope": "N2/L12 pilot: all lag 1-5 envelopes include zero for both estimators; one direct mean-flux half-chain drift alarm. No gap, no pole exclusion and no volume or continuum stability claim.",
+      "premises": [
+        "P-N2-SAMPLING",
+        "P-N2-SPECTRUM"
+      ],
+      "evidence": [
+        "docs/data/oph_n2_pilot_v1/analysis.json",
+        "docs/OPH_N2_PARTICLE_PILOT.md"
+      ],
+      "checks": [
+        "tests/test_n2_pilot.py"
+      ]
+    },
+    {
       "id": "C-NULL",
       "title": "Finite null-tensor identifiability",
       "domain": "finite_mathematics",

@@ -58,9 +58,19 @@ physical masses, gravity and EPR-style explanatory completeness remain unresolve
 axes. Its old numerical rows are quarantined as measurements of the intended
 observable. See the [correction, gauge-invariance regression and new raw runs](docs/OPH_N2_READOUT_CORRECTION.md).
 
+**Next corrected N2 experiment:** the [bounded particle-channel pilot](docs/OPH_N2_PARTICLE_PILOT.md)
+uses L=12 (minimum window extent is L=10), four independent hot/cold seeds,
+512 warmup sweeps and 1,024 measurements per chain. The completed 5.38-minute
+pilot leaves both channels unresolved: all required envelopes include zero and
+one chain triggers a mean-flux drift alarm. The plan includes raw records,
+autocorrelation/ESS and paired-bootstrap diagnostics, measured costs and the
+L=12/16 longer-run requirements. Historical and corrected smoke records are
+preserved byte for byte; no physical gap, mass or particle is inferred.
+
 | Workstream | Current artifact |
 |---|---|
 | Particle candidates and negative controls | [Finite-channel readouts](docs/OPH_PARTICLE_READOUTS.md) |
+| Corrected N2 experiment, diagnostics and costs | [Frozen pilot and unresolved results](docs/OPH_N2_PARTICLE_PILOT.md) |
 | Interacting 3-space + model-time field | [Classical nonlinear benchmark](docs/OPH_INTERACTING_CONTINUUM_READOUTS.md) |
 | Transfer gaps, energy and calibrated units | [Mass/energy contracts](docs/OPH_MASS_ENERGY_READOUTS.md) |
 | Gravity and missing metric component | [Exact null tomography and requirements](docs/OPH_GRAVITY_REQUIREMENTS.md) |

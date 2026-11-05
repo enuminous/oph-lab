@@ -204,32 +204,32 @@
   "source_pin_semantics": "sha256 fields identify inspected working-source bytes; baseline is historical context",
   "sources": [
     {
-      "bytes": 8399,
+      "bytes": 10668,
       "path": "scripts/oph_n2_flux_mc.py",
-      "sha256": "9095261584aa5d66c34ac02ade7a66eb27b7cd3b24cca061c3c50a8f7ac631f8",
+      "sha256": "1306699382b830a45dd72de16426ccf229077e5fe82c50879f534a5af77f7e84",
       "status": "PASS",
       "symbols": [
         {
-          "line_end": 165,
+          "line_end": 202,
           "line_start": 44,
           "name": "run",
-          "source_sha256": "daf897e6039e70ffbf3e126626e55e9dde34cffafd8c7a8cdaf8bb60d5ff85e5"
+          "source_sha256": "cf30429eefc7b093f62d3512f4447b5989d888754275e29cdacec1950222401f"
         },
         {
-          "line_end": 97,
-          "line_start": 60,
+          "line_end": 104,
+          "line_start": 67,
           "name": "run.sweep",
           "source_sha256": "01c44617079e7683608ab467b11d8da9be092322d15f2939f2f16df93352ba92"
         },
         {
-          "line_end": 101,
-          "line_start": 99,
+          "line_end": 108,
+          "line_start": 106,
           "name": "run.flux_slice",
           "source_sha256": "123f4ba4d0dbc50fdbaef92cbd647a6e35c3dfd4f217e4c7a85eba46fa8cd13f"
         },
         {
-          "line_end": 115,
-          "line_start": 103,
+          "line_end": 122,
+          "line_start": 110,
           "name": "run.rb_flux_slice",
           "source_sha256": "83957aebe3b17fa1b2256e64c6163b9c6e2f6699cfec9c4963e4af445103e467"
         },

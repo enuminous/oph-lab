@@ -1,0 +1,33 @@
+{
+  "schema_version": "oph-n2-pilot-v1",
+  "experiment_id": "N2-F01-L12-pilot-20261105-v1",
+  "purpose": "bounded_sampling_and_sensitivity_pilot_not_confirmatory_spectrum",
+  "model": {"L": 12, "N": 2, "alpha": 2.0, "beta": 1.0, "m2": 1.0},
+  "sampling": {"warmup": 512, "samples": 1024, "thin": 1},
+  "chains": [
+    {"seed": 20261105101, "start": "hot"},
+    {"seed": 20261105102, "start": "cold"},
+    {"seed": 20261105103, "start": "hot"},
+    {"seed": 20261105104, "start": "cold"}
+  ],
+  "limits": {"max_total_sweeps": 6144, "max_link_updates": 509607936},
+  "analysis": {
+    "primary_estimator": "rao_blackwell",
+    "required_lags": [1, 2, 3, 4, 5],
+    "centers": [2, 3, 4],
+    "max_relative_gap_spread": 0.05,
+    "max_relative_envelope_width": 0.25,
+    "block_lengths": [16, 32, 64],
+    "minimum_blocks_per_chain": 16,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261105901,
+    "max_rank_folded_split_rhat": 1.01,
+    "minimum_ess_per_chain": 100,
+    "minimum_total_ess": 400,
+    "minimum_chain_length_tau_int": 100,
+    "minimum_largest_block_tau_int": 10,
+    "max_block_standard_error_ratio": 1.25,
+    "max_half_chain_drift_standard_errors": 3.0,
+    "max_direct_rb_difference_standard_errors": 3.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "preserved_from_commit": "693e574aa1519d5785c1c30ae2283eda6c423786",
+  "corrected_smoke_source_path": "experiments/oph_n2/sources/oph_n2_flux_mc_smoke_20261105.py",
+  "corrected_smoke_source_sha256": "9095261584aa5d66c34ac02ade7a66eb27b7cd3b24cca061c3c50a8f7ac631f8",
+  "files": {
+    "docs/data/oph_n2_flux_stage3_summary.csv": "375f278bcf1a5ca4b09736259537da489aedf71781ffd9eb08ef3330d7c68c22",
+    "docs/data/oph_flux_v2_summary.csv": "e654ee9df205ef0408310ba65911fe1602c8cf04534408732b18d0cb39f84d63",
+    "docs/data/oph_particle_readouts.json": "630ed0580b27c891953ca5dddc8947fbae45decb79e482f33ac0e232ceae3c73",
+    "docs/data/oph_flux_v2/L4_N1_seed20261105.json": "79f4831aa9a3222de8286137a3652cab915cc8ad59ad1f4c7efc509e2f51e565",
+    "docs/data/oph_flux_v2/L4_N1_seed20261106.json": "9a888ee0642e98ab5cc5ed36fa6a2573fed85aae10c1fbcfe1182b38174a8ee3",
+    "docs/data/oph_flux_v2/L4_N2_seed20261105.json": "91ebbc95af74172b19fb2585de78659b5d70150ecf41a001bae4967f552a66fa",
+    "docs/data/oph_flux_v2/L4_N2_seed20261106.json": "4ff3a7699780d8418b7ad340d864a47b105203e7610d1f3c16e68ccb973e4583"
+  },
+  "scope": "Original historical, frozen classifier and corrected smoke records preserved byte for byte; source snapshot only, no re-execution or retroactive repair."
+}

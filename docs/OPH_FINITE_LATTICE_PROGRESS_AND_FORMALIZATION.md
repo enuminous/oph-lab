@@ -47,6 +47,25 @@ and [detailed finite inventory](OPH_FINITE_PREMISES.md) retain the open steps.
 The five new Lean declarations are accepted as machine checked only with a
 successful pinned build and axiom audit of the commit containing this revision.
 
+### Corrected N2 follow-up pilot
+
+The [reproducible pilot plan and receipt](OPH_N2_PARTICLE_PILOT.md) determine
+that the frozen lag-1–5 / centers-2,3,4 test needs even transfer extent at least
+10. Four corrected L=12 chains (two hot and two cold starts, 512 warmup sweeps,
+1,024 measurements at one sweep per measurement) completed in 322.77 seconds.
+Both estimators remain unresolved: every required lag envelope includes zero,
+and one cold-start chain triggers the fixed mean direct-flux drift alarm.
+No stable gap, pole exclusion, particle or physical mass follows. All historical
+and corrected L=4 smoke records remain byte-for-byte intact.
+
+The added diagnostics retain autocorrelations, effective sample-size estimates,
+rank/folded split R-hat, block-size sensitivity and the joint lag/direct-RB
+covariance. Their controls establish software behavior, not mixing or a
+spectral theorem. A proposed four-chain L=12 plus L=16 longer batch costs about
+2.69 serial hours on the measured runtime (5.4 hours with a 2x margin); it has
+not been executed. Source-selected reconstruction, volume/length control,
+continuum and empirical attachment remain open.
+
 ### Observer access and the completeness goal
 
 Observers may inspect simulator specifications, state/readback, scheduler,
